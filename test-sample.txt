@@ -1,0 +1,4 @@
+# Frontend Test Sample File
+This is a test sample file to verify the Git Push & Pull automation workflow.
+Created: 2026-09-19
+Repository: SparkFest_Frontend
