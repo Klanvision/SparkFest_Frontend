@@ -24,11 +24,15 @@ import ResponsibleParticipation from './pages/ResponsibleParticipation';
 import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
 
-// Auto scroll to top on navigation
+// Auto scroll to top on navigation with smooth behavior
 function ScrollToTop() {
   const { pathname } = useLocation();
   useEffect(() => {
-    window.scrollTo(0, 0);
+    window.scrollTo({
+      top: 0,
+      left: 0,
+      behavior: 'smooth'
+    });
   }, [pathname]);
   return null;
 }
@@ -50,6 +54,7 @@ export default function App() {
             <Route path="/faq" element={<FAQ />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/participate" element={<Participate />} />
+            <Route path="/register" element={<Participate />} />
             <Route path="/enter" element={<Participate />} />
             <Route path="/confirmation" element={<Confirmation />} />
             <Route path="/ticket/:ticketNumber" element={<TicketDetails />} />
