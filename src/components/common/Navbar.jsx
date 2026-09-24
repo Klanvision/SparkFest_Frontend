@@ -38,12 +38,17 @@ export default function Navbar() {
     return false;
   };
 
+  const isWinners = location.pathname.startsWith('/winners');
+
   return (
     <header
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-        ? 'glass-nav py-2.5 shadow-2xl bg-[#050614]/90 backdrop-blur-md'
-        : 'bg-transparent py-4'
-        }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+        isWinners
+          ? `bg-[#080a18] border-b border-[#e5b32f]/15 ${isScrolled ? 'py-2.5 shadow-2xl' : 'py-4'}`
+          : isScrolled
+          ? 'glass-nav py-2.5 shadow-2xl bg-[#050614]/90 backdrop-blur-md'
+          : 'bg-transparent py-4'
+      }`}
     >
       <div className="w-full px-4 sm:px-8 lg:px-12 xl:px-16 flex items-center justify-between">
         {/* Left: Brand Logo */}

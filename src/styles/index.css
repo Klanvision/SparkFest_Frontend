@@ -70,6 +70,59 @@
   100% { transform: translateX(200%) skewX(-15deg); }
 }
 
+@keyframes ball-bounce-drop {
+  0% {
+    transform: translateY(-11px) scale(1, 1);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); /* gravity fall */
+  }
+  36% {
+    transform: translateY(0px) scale(0.97, 1.03);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.35);
+  }
+  40% {
+    transform: translateY(1.5px) scale(1.10, 0.90); /* squash on ground contact */
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.45);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1); /* spring rebound upwards */
+  }
+  54% {
+    transform: translateY(-7px) scale(0.96, 1.05); /* stretch rising */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.28);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19); /* gravity decelerates to top then falls */
+  }
+  68% {
+    transform: translateY(0px) scale(1.04, 0.96); /* gentle secondary rebound */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    animation-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+  }
+  82% {
+    transform: translateY(-11px) scale(1, 1); /* returns to top */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+  100% {
+    transform: translateY(-11px) scale(1, 1); /* apex pause */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25);
+  }
+}
+
+.animate-ball-bounce {
+  animation: ball-bounce-drop 2.2s infinite;
+}
+
+@keyframes arrow-glide-x {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(5px);
+  }
+}
+
+.animate-arrow-glide {
+  animation: arrow-glide-x 1.5s ease-in-out infinite;
+  will-change: transform;
+}
+
 @keyframes ribbon-float {
   0%, 100% { 
     transform: translateY(0) rotate(-1deg) scale(1); 
@@ -147,6 +200,144 @@
   animation: gift-tada 2.5s infinite;
 }
 
+@keyframes cta-circle-beckon {
+  0%, 100% {
+    transform: translateX(0px);
+    box-shadow: 0 0 0px rgba(245, 192, 66, 0);
+  }
+  50% {
+    transform: translateX(4px);
+    box-shadow: 0 0 8px rgba(245, 192, 66, 0.45);
+  }
+}
+
+.animate-cta-beckon {
+  animation: cta-circle-beckon 1.8s ease-in-out infinite;
+}
+
+/* Step Cards Connecting Arrow Flow Animation - Floating ON TOP of slides */
+@keyframes connector-arrow-glide {
+  0%, 100% {
+    transform: translateX(-3px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.55), 0 0 10px rgba(223, 182, 88, 0.35);
+    border-color: rgba(223, 182, 88, 0.75);
+  }
+  50% {
+    transform: translateX(6px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.7), 0 0 20px rgba(255, 224, 122, 0.9), 0 0 30px rgba(229, 179, 47, 0.5);
+    border-color: rgba(255, 235, 150, 1);
+  }
+}
+
+.animate-connector-glide {
+  animation: connector-arrow-glide 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* Inner Arrow Forward Shimmer & Micro-Glide */
+@keyframes inner-arrow-flow {
+  0%, 100% {
+    transform: translateX(-0.5px);
+    color: #f7cb52;
+    filter: drop-shadow(0 0 2px rgba(247, 203, 82, 0.4));
+  }
+  50% {
+    transform: translateX(2.5px);
+    color: #ffffff;
+    filter: drop-shadow(0 0 6px rgba(255, 245, 200, 0.95)) drop-shadow(0 0 12px rgba(255, 215, 90, 0.75));
+  }
+}
+
+.animate-inner-arrow-flow {
+  animation: inner-arrow-flow 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* CTA Button Arrow Glide Animation */
+@keyframes cta-arrow-glow-glide {
+  0%, 100% {
+    transform: translateX(-1px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
+    border-color: rgba(255, 217, 120, 0.5);
+  }
+  50% {
+    transform: translateX(5.5px);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.45), 0 0 16px rgba(255, 224, 122, 0.85), 0 0 24px rgba(229, 179, 47, 0.45);
+    border-color: rgba(255, 235, 160, 0.95);
+  }
+}
+
+.animate-cta-arrow-glide {
+  animation: cta-arrow-glow-glide 2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* Grand Prize Button Forward and Backward Arrow Gliding Animation */
+@keyframes prize-arrow-back-forth {
+  0%, 100% {
+    transform: translateX(0px);
+    opacity: 0.9;
+    filter: drop-shadow(0 0 2px rgba(245, 198, 76, 0.4));
+  }
+  50% {
+    transform: translateX(5.5px);
+    opacity: 1;
+    filter: drop-shadow(0 0 6px rgba(255, 235, 140, 0.95)) drop-shadow(0 0 10px rgba(245, 198, 76, 0.6));
+  }
+}
+
+@keyframes prize-arrow-back-forth-fast {
+  0%, 100% {
+    transform: translateX(0px);
+    filter: drop-shadow(0 0 3px rgba(255, 235, 140, 0.6));
+  }
+  50% {
+    transform: translateX(7.5px);
+    filter: drop-shadow(0 0 8px rgba(255, 255, 255, 1)) drop-shadow(0 0 14px rgba(245, 198, 76, 0.9));
+  }
+}
+
+.animate-arrow-back-forth {
+  animation: prize-arrow-back-forth 1.7s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+  will-change: transform;
+}
+
+.group\/btn:hover .animate-arrow-back-forth {
+  animation: prize-arrow-back-forth-fast 1.1s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+/* Slowly blinking festive light dots */
+@keyframes slow-light-twinkle {
+  0%, 100% {
+    opacity: 0.18;
+    transform: translate(-50%, -50%) scale(0.65);
+    filter: drop-shadow(0 0 2px rgba(255, 215, 90, 0.4));
+  }
+  50% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.35);
+    filter: drop-shadow(0 0 8px rgba(255, 235, 140, 1)) drop-shadow(0 0 16px rgba(250, 175, 40, 0.75));
+  }
+}
+
+@keyframes slow-flame-pulse {
+  0%, 100% {
+    opacity: 0.45;
+    transform: translate(-50%, -50%) scale(0.85);
+    filter: drop-shadow(0 0 4px rgba(255, 190, 50, 0.5));
+  }
+  50% {
+    opacity: 0.98;
+    transform: translate(-50%, -50%) scale(1.25);
+    filter: drop-shadow(0 0 14px rgba(255, 230, 100, 1)) drop-shadow(0 0 24px rgba(245, 150, 20, 0.85));
+  }
+}
+
+.animate-light-twinkle {
+  animation: slow-light-twinkle ease-in-out infinite;
+}
+
+.animate-flame-pulse {
+  animation: slow-flame-pulse ease-in-out infinite;
+}
+
 /* Custom Scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
@@ -161,3 +352,152 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #d4af37;
 }
+
+/* ---------------------------------------------------- */
+/* ULTRA-PREMIUM 3D PRIZE ICON HOVER ANIMATIONS        */
+/* ---------------------------------------------------- */
+
+@keyframes trophy-royal-float {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.65));
+  }
+  25% {
+    transform: translateY(-8px) scale(1.09) rotate(-2deg);
+    filter: drop-shadow(0 12px 24px rgba(245, 198, 76, 0.7)) drop-shadow(0 0 16px rgba(192, 132, 252, 0.5)) brightness(1.12);
+  }
+  50% {
+    transform: translateY(-11px) scale(1.11) rotate(0deg);
+    filter: drop-shadow(0 16px 28px rgba(245, 198, 76, 0.8)) drop-shadow(0 0 22px rgba(245, 198, 76, 0.6)) brightness(1.16);
+  }
+  75% {
+    transform: translateY(-8px) scale(1.09) rotate(2deg);
+    filter: drop-shadow(0 12px 24px rgba(245, 198, 76, 0.7)) drop-shadow(0 0 16px rgba(192, 132, 252, 0.5)) brightness(1.12);
+  }
+  100% {
+    transform: translateY(-11px) scale(1.11) rotate(0deg);
+    filter: drop-shadow(0 16px 28px rgba(245, 198, 76, 0.8)) drop-shadow(0 0 22px rgba(245, 198, 76, 0.6)) brightness(1.16);
+  }
+}
+
+@keyframes gift-festive-bounce {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.65));
+  }
+  20% {
+    transform: translateY(-12px) scale(1.12) rotate(2.5deg);
+    filter: drop-shadow(0 14px 26px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 20px rgba(239, 68, 68, 0.6)) brightness(1.15);
+  }
+  45% {
+    transform: translateY(-7px) scale(1.07) rotate(-2deg);
+    filter: drop-shadow(0 10px 20px rgba(245, 158, 11, 0.7)) drop-shadow(0 0 14px rgba(245, 158, 11, 0.5)) brightness(1.1);
+  }
+  70% {
+    transform: translateY(-11px) scale(1.11) rotate(1deg);
+    filter: drop-shadow(0 15px 28px rgba(245, 158, 11, 0.85)) drop-shadow(0 0 22px rgba(245, 158, 11, 0.65)) brightness(1.16);
+  }
+  100% {
+    transform: translateY(-9px) scale(1.09) rotate(0deg);
+    filter: drop-shadow(0 13px 24px rgba(245, 158, 11, 0.8)) drop-shadow(0 0 18px rgba(239, 68, 68, 0.55)) brightness(1.14);
+  }
+}
+
+@keyframes star-radiance-twinkle {
+  0% {
+    transform: translateY(0) scale(1) rotate(0deg);
+    filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.65));
+  }
+  30% {
+    transform: translateY(-9px) scale(1.12) rotate(-3deg);
+    filter: drop-shadow(0 14px 26px rgba(250, 204, 21, 0.85)) drop-shadow(0 0 20px rgba(52, 211, 153, 0.55)) brightness(1.15);
+  }
+  60% {
+    transform: translateY(-11px) scale(1.14) rotate(3deg);
+    filter: drop-shadow(0 16px 30px rgba(250, 204, 21, 0.95)) drop-shadow(0 0 24px rgba(250, 204, 21, 0.7)) brightness(1.18);
+  }
+  100% {
+    transform: translateY(-9px) scale(1.12) rotate(0deg);
+    filter: drop-shadow(0 14px 26px rgba(250, 204, 21, 0.85)) drop-shadow(0 0 20px rgba(52, 211, 153, 0.55)) brightness(1.15);
+  }
+}
+
+@keyframes ambient-glow-pulse {
+  0%, 100% {
+    transform: scale(1.05);
+    opacity: 0.35;
+  }
+  50% {
+    transform: scale(1.5);
+    opacity: 0.8;
+  }
+}
+
+/* Hover-triggered animation hooks */
+.group:hover .animate-trophy-hover {
+  animation: trophy-royal-float 2.4s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+
+.group:hover .animate-gift-hover {
+  animation: gift-festive-bounce 2.2s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+
+.group:hover .animate-star-hover {
+  animation: star-radiance-twinkle 2.4s cubic-bezier(0.37, 0, 0.63, 1) infinite alternate;
+}
+
+.group:hover .animate-ambient-aura {
+  animation: ambient-glow-pulse 2s ease-in-out infinite;
+}
+
+/* ------------------------------------------------------------- */
+/* Live Prizes 3D Icon Premium Levitation & Radiant Breathing Aura */
+/* ------------------------------------------------------------- */
+@keyframes liveIconLevitate {
+  0%, 100% {
+    transform: translateY(0px) scale(1);
+    filter: drop-shadow(0 6px 14px rgba(0, 0, 0, 0.85));
+  }
+  50% {
+    transform: translateY(-6px) scale(1.03);
+    filter: drop-shadow(0 12px 22px rgba(0, 0, 0, 0.95));
+  }
+}
+
+@keyframes liveAuraBreathe {
+  0%, 100% {
+    opacity: 0.35;
+    transform: scale(0.92);
+  }
+  50% {
+    opacity: 0.80;
+    transform: scale(1.15);
+  }
+}
+
+.animate-live-icon-1 {
+  animation: liveIconLevitate 3.6s ease-in-out infinite;
+}
+.animate-live-icon-2 {
+  animation: liveIconLevitate 4.0s ease-in-out infinite 0.5s;
+}
+.animate-live-icon-3 {
+  animation: liveIconLevitate 3.8s ease-in-out infinite 1.0s;
+}
+.animate-live-icon-4 {
+  animation: liveIconLevitate 4.2s ease-in-out infinite 1.5s;
+}
+
+.animate-live-aura-1 {
+  animation: liveAuraBreathe 3.6s ease-in-out infinite;
+}
+.animate-live-aura-2 {
+  animation: liveAuraBreathe 4.0s ease-in-out infinite 0.5s;
+}
+.animate-live-aura-3 {
+  animation: liveAuraBreathe 3.8s ease-in-out infinite 1.0s;
+}
+.animate-live-aura-4 {
+  animation: liveAuraBreathe 4.2s ease-in-out infinite 1.5s;
+}
+
