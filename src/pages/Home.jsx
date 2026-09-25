@@ -110,11 +110,11 @@ const CardCornerFlourish = ({ position }) => {
   }[position];
 
   return (
-    <svg 
-      className={`absolute ${classes} w-4 h-4 pointer-events-none text-[#f3c64c]/40 group-hover:text-[#ffe58f]/80 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_0_4px_rgba(243,198,76,0.3)]`} 
-      viewBox="0 0 16 16" 
-      fill="none" 
-      stroke="currentColor" 
+    <svg
+      className={`absolute ${classes} w-4 h-4 pointer-events-none text-[#f3c64c]/40 group-hover:text-[#ffe58f]/80 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_0_4px_rgba(243,198,76,0.3)]`}
+      viewBox="0 0 16 16"
+      fill="none"
+      stroke="currentColor"
       strokeWidth="1.3"
     >
       <path d="M1 12V3C1 1.89543 1.89543 1 3 1H12" strokeLinecap="round" />
@@ -370,10 +370,10 @@ const specialOfferCards = [
     badge: 'ENTRY OFFER',
     badgeIcon: 'Ticket',
     badgeStyle: 'bg-gradient-to-r from-[#2f1052] via-[#3a1566] to-[#250c41] text-[#ffe58f] border border-[#f5cb5c]/65 shadow-[0_2px_10px_rgba(245,203,92,0.25)]',
-    highlight: '₹10',
+    highlight: '10',
     subtitle: 'Single Ticket Entry',
     tagline: 'Start Small, Win Big',
-    description: 'Join the lucky draw with just ₹10 for a chance to win exciting cash rewards.',
+    description: 'Join the lucky draw with just 10 for a chance to win exciting premium gifts.',
     statusIcon: 'Zap',
     statusText: 'Instant Digital Allocation',
     statusPillStyle: 'bg-gradient-to-r from-[#290d4b]/90 to-[#1c0634]/90 border-[#c084fc]/45 text-[#ffe58f] shadow-[0_2px_12px_rgba(192,132,252,0.22)]',
@@ -461,11 +461,10 @@ const InteractiveOfferCard = ({ card, isSelected, onSelect }) => {
       onClick={onSelect}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`group relative rounded-2xl p-6 sm:p-7 flex flex-col justify-between cursor-pointer select-none transition-all duration-300 ease-out bg-gradient-to-b ${card.cardBg} border ${
-        isSelected
-          ? `border-[#f5cb5c] ring-2 ring-[#f5cb5c]/85 ${card.activeGlow}`
-          : `${card.borderStyle} hover:border-[#f5cb5c]/80`
-      }`}
+      className={`group relative rounded-2xl p-6 sm:p-7 flex flex-col justify-between cursor-pointer select-none transition-all duration-300 ease-out bg-gradient-to-b ${card.cardBg} border ${isSelected
+        ? `border-[#f5cb5c] ring-2 ring-[#f5cb5c]/85 ${card.activeGlow}`
+        : `${card.borderStyle} hover:border-[#f5cb5c]/80`
+        }`}
       style={{
         transform: tilt.isHovered
           ? `perspective(850px) rotateX(${tilt.rotX.toFixed(2)}deg) rotateY(${tilt.rotY.toFixed(2)}deg) translateY(-6px) scale3d(1.02, 1.02, 1.02)`
@@ -610,7 +609,7 @@ const InteractiveGrandPrizeCard = ({ prize }) => {
     <div
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
-      className={`w-full max-w-[290px] sm:w-[300px] lg:w-[315px] h-[298px] sm:h-[308px] relative rounded-2xl p-4 sm:p-5 text-center flex flex-col justify-between items-center cursor-pointer select-none transition-all duration-300 ease-out ${prize.bgGradient} border ${prize.borderColor} hover:border-[#ffe58f] ${prize.glowShadow} group overflow-hidden`}
+      className={`w-full max-w-[290px] sm:w-[300px] lg:w-[315px] min-h-[340px] sm:min-h-[350px] relative rounded-2xl p-4 sm:p-5 text-center flex flex-col justify-between items-center cursor-pointer select-none transition-all duration-300 ease-out ${prize.bgGradient} border ${prize.borderColor} hover:border-[#ffe58f] ${prize.glowShadow} group overflow-hidden`}
       style={{
         transform: tilt.isHovered
           ? `perspective(850px) rotateX(${tilt.rotX.toFixed(2)}deg) rotateY(${tilt.rotY.toFixed(2)}deg) translateY(-8px) scale3d(1.025, 1.025, 1.025)`
@@ -639,17 +638,15 @@ const InteractiveGrandPrizeCard = ({ prize }) => {
       >
         {/* Glowing Ambient Aura that intensifies and breathes on hover */}
         <div
-          className={`absolute w-24 h-24 rounded-full bg-gradient-to-br ${prize.auraColor} blur-xl pointer-events-none transition-all duration-500 animate-ambient-aura ${
-            tilt.isHovered ? 'opacity-95 scale-110' : 'opacity-35 scale-100'
-          }`}
+          className={`absolute w-24 h-24 rounded-full bg-gradient-to-br ${prize.auraColor} blur-xl pointer-events-none transition-all duration-500 animate-ambient-aura ${tilt.isHovered ? 'opacity-95 scale-110' : 'opacity-35 scale-100'
+            }`}
         />
 
         <img
           src={prize.image}
           alt={prize.title}
-          className={`relative z-10 w-[80px] h-[80px] sm:w-[86px] sm:h-[86px] object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)] ${prize.animClass} transition-all duration-300 pointer-events-none select-none ${
-            tilt.isHovered ? 'scale-105' : ''
-          }`}
+          className={`relative z-10 w-[80px] h-[80px] sm:w-[86px] sm:h-[86px] object-contain drop-shadow-[0_8px_20px_rgba(0,0,0,0.7)] ${prize.animClass} transition-all duration-300 pointer-events-none select-none ${tilt.isHovered ? 'scale-105' : ''
+            }`}
         />
       </div>
 
@@ -712,19 +709,19 @@ const RoyalHeaderOrnament = ({ flip = false }) => {
     <div className={`flex items-center gap-1 sm:gap-1.5 md:gap-2 select-none pointer-events-none shrink ${flip ? 'scale-x-[-1]' : ''}`}>
       {/* 1. Tapering glowing gold hairline */}
       <div className="h-[1.5px] w-6 sm:w-14 md:w-24 lg:w-32 bg-gradient-to-r from-transparent via-[#e5b32f]/60 to-[#ffe58f]" />
-      
+
       {/* 2. Small solid gold accent diamond */}
       <div className="w-1.5 h-1.5 rotate-45 bg-[#f5c64c] shadow-[0_0_6px_rgba(245,198,76,0.9)] shrink-0" />
-      
+
       {/* 3. Short connecting bar */}
       <div className="h-[1.5px] w-1.5 sm:w-2.5 bg-[#ffe58f] shrink-0" />
-      
+
       {/* 4. Central Ornate Hollow Diamond with glowing center core */}
       <div className="relative w-3.5 h-3.5 sm:w-4 sm:h-4 flex items-center justify-center shrink-0">
         <div className="w-2.5 h-2.5 sm:w-3.5 sm:h-3.5 rotate-45 border-[1.5px] border-[#ffe58f] bg-[#0c1024] shadow-[0_0_8px_rgba(245,198,76,0.95)]" />
         <div className="absolute w-1 h-1 rotate-45 bg-[#ffe58f] shadow-[0_0_4px_#fff]" />
       </div>
-      
+
       {/* 5. Gold line extending inward to text */}
       <div className="h-[1.5px] w-2 sm:w-4 md:w-5 bg-gradient-to-r from-[#ffe58f] to-[#f5c64c] shrink-0" />
     </div>
@@ -843,15 +840,15 @@ const RoyalUsersIcon = () => (
   >
     <defs>
       <linearGradient id="sharpGold1" x1="18" y1="4" x2="18" y2="30" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFBE6"/>
-        <stop offset="30%" stopColor="#FCD34D"/>
-        <stop offset="70%" stopColor="#E59E10"/>
-        <stop offset="100%" stopColor="#A86208"/>
+        <stop offset="0%" stopColor="#FFFBE6" />
+        <stop offset="30%" stopColor="#FCD34D" />
+        <stop offset="70%" stopColor="#E59E10" />
+        <stop offset="100%" stopColor="#A86208" />
       </linearGradient>
       <linearGradient id="sharpGoldCrown" x1="18" y1="2" x2="18" y2="10" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFFFF"/>
-        <stop offset="60%" stopColor="#FFE082"/>
-        <stop offset="100%" stopColor="#F59E0B"/>
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="60%" stopColor="#FFE082" />
+        <stop offset="100%" stopColor="#F59E0B" />
       </linearGradient>
     </defs>
     {/* Festive Star Sparkle Crown */}
@@ -863,7 +860,7 @@ const RoyalUsersIcon = () => (
       className="transition-transform duration-300 group-hover:scale-115 origin-center"
     />
     {/* Center User Head */}
-    <circle cx="18" cy="15" r="4.2" fill="url(#sharpGold1)" stroke="#FFF9D2" strokeWidth="0.8"/>
+    <circle cx="18" cy="15" r="4.2" fill="url(#sharpGold1)" stroke="#FFF9D2" strokeWidth="0.8" />
     {/* Center User Torso */}
     <path
       d="M10.8 28.5C10.8 23.8 14 21.2 18 21.2C22 21.2 25.2 23.8 25.2 28.5C25.2 28.8 24.8 29.2 24.2 29.2H11.8C11.2 29.2 10.8 28.8 10.8 28.5Z"
@@ -872,7 +869,7 @@ const RoyalUsersIcon = () => (
       strokeWidth="0.8"
     />
     {/* Left User Head & Shoulder */}
-    <circle cx="9.5" cy="17" r="3.2" fill="url(#sharpGold1)" opacity="0.95" stroke="#FFEAA2" strokeWidth="0.5"/>
+    <circle cx="9.5" cy="17" r="3.2" fill="url(#sharpGold1)" opacity="0.95" stroke="#FFEAA2" strokeWidth="0.5" />
     <path
       d="M4 27.5C4 24.2 6.5 22.2 9.5 22.2C10.8 22.2 12 22.7 12.8 23.6C12.3 25 12 26.6 12 28.2H4.5C4.2 28.2 4 27.9 4 27.5Z"
       fill="url(#sharpGold1)"
@@ -881,7 +878,7 @@ const RoyalUsersIcon = () => (
       strokeWidth="0.5"
     />
     {/* Right User Head & Shoulder */}
-    <circle cx="26.5" cy="17" r="3.2" fill="url(#sharpGold1)" opacity="0.95" stroke="#FFEAA2" strokeWidth="0.5"/>
+    <circle cx="26.5" cy="17" r="3.2" fill="url(#sharpGold1)" opacity="0.95" stroke="#FFEAA2" strokeWidth="0.5" />
     <path
       d="M32 27.5C32 24.2 29.5 22.2 26.5 22.2C25.2 22.2 24 22.7 23.2 23.6C23.7 25 24 26.6 24 28.2H31.5C31.8 28.2 32 27.9 32 27.5Z"
       fill="url(#sharpGold1)"
@@ -906,21 +903,21 @@ const RoyalShieldIcon = () => (
   >
     <defs>
       <linearGradient id="shieldLeftSharp" x1="7" y1="5" x2="18" y2="32" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFDE8"/>
-        <stop offset="35%" stopColor="#FCD34D"/>
-        <stop offset="70%" stopColor="#E59E10"/>
-        <stop offset="100%" stopColor="#A86208"/>
+        <stop offset="0%" stopColor="#FFFDE8" />
+        <stop offset="35%" stopColor="#FCD34D" />
+        <stop offset="70%" stopColor="#E59E10" />
+        <stop offset="100%" stopColor="#A86208" />
       </linearGradient>
       <linearGradient id="shieldRightSharp" x1="29" y1="5" x2="18" y2="32" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFEBA0"/>
-        <stop offset="35%" stopColor="#E59E10"/>
-        <stop offset="75%" stopColor="#A86208"/>
-        <stop offset="100%" stopColor="#6E3B02"/>
+        <stop offset="0%" stopColor="#FFEBA0" />
+        <stop offset="35%" stopColor="#E59E10" />
+        <stop offset="75%" stopColor="#A86208" />
+        <stop offset="100%" stopColor="#6E3B02" />
       </linearGradient>
       <linearGradient id="sharpCheckGrad" x1="13" y1="14" x2="23" y2="23" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFFFF"/>
-        <stop offset="50%" stopColor="#FFF9D2"/>
-        <stop offset="100%" stopColor="#FCD34D"/>
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="50%" stopColor="#FFF9D2" />
+        <stop offset="100%" stopColor="#FCD34D" />
       </linearGradient>
     </defs>
     {/* Outer Shield Frame */}
@@ -932,9 +929,9 @@ const RoyalShieldIcon = () => (
       strokeLinejoin="round"
     />
     {/* Left Facet */}
-    <path d="M18 5.5L8.5 9.5V17.5C8.5 23.8 12.6 29.8 18 31.2V5.5Z" fill="url(#shieldLeftSharp)"/>
+    <path d="M18 5.5L8.5 9.5V17.5C8.5 23.8 12.6 29.8 18 31.2V5.5Z" fill="url(#shieldLeftSharp)" />
     {/* Right Facet */}
-    <path d="M18 5.5L27.5 9.5V17.5C27.5 23.8 23.4 29.8 18 31.2V5.5Z" fill="url(#shieldRightSharp)"/>
+    <path d="M18 5.5L27.5 9.5V17.5C27.5 23.8 23.4 29.8 18 31.2V5.5Z" fill="url(#shieldRightSharp)" />
     {/* Inner Jewel Accent Hairline */}
     <path
       d="M18 8.5L11.5 11.8V17.5C11.5 22.2 14.3 26.8 18 28.2C21.7 26.8 24.5 22.2 24.5 17.5V11.8L18 8.5Z"
@@ -952,7 +949,7 @@ const RoyalShieldIcon = () => (
       className="transition-transform duration-300 group-hover:scale-110 origin-center"
     />
     {/* Top Star Sparkle */}
-    <path d="M18 2L18.6 3.4L20 4L18.6 4.6L18 6L17.4 4.6L16 4L17.4 3.4L18 2Z" fill="#FFFDE8"/>
+    <path d="M18 2L18.6 3.4L20 4L18.6 4.6L18 6L17.4 4.6L16 4L17.4 3.4L18 2Z" fill="#FFFDE8" />
   </svg>
 );
 
@@ -967,51 +964,51 @@ const RoyalGiftIcon = () => (
   >
     <defs>
       <linearGradient id="sharpGiftBox" x1="18" y1="16" x2="18" y2="31" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFF9D2"/>
-        <stop offset="35%" stopColor="#FCD34D"/>
-        <stop offset="75%" stopColor="#E59E10"/>
-        <stop offset="100%" stopColor="#965505"/>
+        <stop offset="0%" stopColor="#FFF9D2" />
+        <stop offset="35%" stopColor="#FCD34D" />
+        <stop offset="75%" stopColor="#E59E10" />
+        <stop offset="100%" stopColor="#965505" />
       </linearGradient>
       <linearGradient id="sharpGiftLid" x1="18" y1="10" x2="18" y2="16" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFFFF"/>
-        <stop offset="45%" stopColor="#FEE488"/>
-        <stop offset="100%" stopColor="#E59E10"/>
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="45%" stopColor="#FEE488" />
+        <stop offset="100%" stopColor="#E59E10" />
       </linearGradient>
       <linearGradient id="sharpRibbon" x1="18" y1="11" x2="18" y2="31" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFFFF"/>
-        <stop offset="50%" stopColor="#FFF9D2"/>
-        <stop offset="100%" stopColor="#F59E0B"/>
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="50%" stopColor="#FFF9D2" />
+        <stop offset="100%" stopColor="#F59E0B" />
       </linearGradient>
       <linearGradient id="sharpBow" x1="18" y1="4" x2="18" y2="12" gradientUnits="userSpaceOnUse">
-        <stop offset="0%" stopColor="#FFFFFF"/>
-        <stop offset="40%" stopColor="#FEE488"/>
-        <stop offset="100%" stopColor="#D97706"/>
+        <stop offset="0%" stopColor="#FFFFFF" />
+        <stop offset="40%" stopColor="#FEE488" />
+        <stop offset="100%" stopColor="#D97706" />
       </linearGradient>
     </defs>
     {/* Gift Box Base */}
-    <rect x="7" y="16" width="22" height="15" rx="2" fill="url(#sharpGiftBox)" stroke="#FFF9D2" strokeWidth="0.8"/>
+    <rect x="7" y="16" width="22" height="15" rx="2" fill="url(#sharpGiftBox)" stroke="#FFF9D2" strokeWidth="0.8" />
     {/* Vertical Ribbon */}
-    <rect x="16" y="16" width="4" height="15" fill="url(#sharpRibbon)" stroke="rgba(255,255,255,0.8)" strokeWidth="0.5"/>
+    <rect x="16" y="16" width="4" height="15" fill="url(#sharpRibbon)" stroke="rgba(255,255,255,0.8)" strokeWidth="0.5" />
     {/* Horizontal Ribbon on Box */}
-    <rect x="7" y="21.5" width="22" height="3" fill="url(#sharpRibbon)" opacity="0.6"/>
+    <rect x="7" y="21.5" width="22" height="3" fill="url(#sharpRibbon)" opacity="0.6" />
 
     {/* Interactive Top Lid & Bow - Micro-hops on hover */}
     <g className="transition-transform duration-300 ease-out group-hover:-translate-y-1 origin-bottom">
       {/* Gift Box Lid */}
-      <rect x="5.5" y="11" width="25" height="5.5" rx="1.5" fill="url(#sharpGiftLid)" stroke="#FFFBE6" strokeWidth="0.8"/>
+      <rect x="5.5" y="11" width="25" height="5.5" rx="1.5" fill="url(#sharpGiftLid)" stroke="#FFFBE6" strokeWidth="0.8" />
       {/* Lid Ribbon Segment */}
-      <rect x="16" y="11" width="4" height="5.5" fill="url(#sharpRibbon)" stroke="rgba(255,255,255,0.8)" strokeWidth="0.5"/>
+      <rect x="16" y="11" width="4" height="5.5" fill="url(#sharpRibbon)" stroke="rgba(255,255,255,0.8)" strokeWidth="0.5" />
       {/* Bow Left Loop */}
-      <path d="M18 11.5C15 8.2 10.5 6.8 11.2 5.2C11.8 3.8 14.5 4.5 17.5 9.5" fill="url(#sharpBow)" stroke="#FFF9D2" strokeWidth="0.6"/>
+      <path d="M18 11.5C15 8.2 10.5 6.8 11.2 5.2C11.8 3.8 14.5 4.5 17.5 9.5" fill="url(#sharpBow)" stroke="#FFF9D2" strokeWidth="0.6" />
       {/* Bow Right Loop */}
-      <path d="M18 11.5C21 8.2 25.5 6.8 24.8 5.2C24.2 3.8 21.5 4.5 18.5 9.5" fill="url(#sharpBow)" stroke="#FFF9D2" strokeWidth="0.6"/>
+      <path d="M18 11.5C21 8.2 25.5 6.8 24.8 5.2C24.2 3.8 21.5 4.5 18.5 9.5" fill="url(#sharpBow)" stroke="#FFF9D2" strokeWidth="0.6" />
       {/* Bow Center Knot */}
-      <circle cx="18" cy="11" r="2.2" fill="#FFFFFF" stroke="#E59E10" strokeWidth="0.8"/>
+      <circle cx="18" cy="11" r="2.2" fill="#FFFFFF" stroke="#E59E10" strokeWidth="0.8" />
     </g>
 
     {/* Festive Floating Sparkle Stars */}
-    <path d="M5.5 8L6 9.2L7.2 9.5L6.2 10.3L6.5 11.5L5.5 10.8L4.5 11.5L4.8 10.3L3.8 9.5L5 9.2L5.5 8Z" fill="#FFFDE8"/>
-    <path d="M30.5 7L31 8L32.2 8.3L31.2 9L31.5 10.2L30.5 9.5L29.5 10.2L29.8 9L28.8 8.3L30 8L30.5 7Z" fill="#FFFDE8"/>
+    <path d="M5.5 8L6 9.2L7.2 9.5L6.2 10.3L6.5 11.5L5.5 10.8L4.5 11.5L4.8 10.3L3.8 9.5L5 9.2L5.5 8Z" fill="#FFFDE8" />
+    <path d="M30.5 7L31 8L32.2 8.3L31.2 9L31.5 10.2L30.5 9.5L29.5 10.2L29.8 9L28.8 8.3L30 8L30.5 7Z" fill="#FFFDE8" />
   </svg>
 );
 
@@ -1473,9 +1470,9 @@ const luckyWinnersData = [
     themeKey: 'gold',
     name: 'Rohith Kumar',
     location: 'Hyderabad',
-    prize: '₹50,000',
+    prize: '₹10,000',
     ticketNumber: 'DD-2026-HYD-50K',
-    prizeAmount: '₹50,000',
+    prizeAmount: '₹10,000',
     prizeTitle: '1st Prize Champion (Hyderabad)',
     drawDate: '10 Nov 2026',
     winnerName: 'Rohith Kumar'
@@ -1487,9 +1484,9 @@ const luckyWinnersData = [
     themeKey: 'silver',
     name: 'Sravani Reddy',
     location: 'Vijayawada',
-    prize: '₹25,000',
+    prize: '₹9,500',
     ticketNumber: 'DD-2026-VIJ-25K',
-    prizeAmount: '₹25,000',
+    prizeAmount: '₹9,500',
     prizeTitle: '2nd Prize Winner (Vijayawada)',
     drawDate: '10 Nov 2026',
     winnerName: 'Sravani Reddy'
@@ -1501,9 +1498,9 @@ const luckyWinnersData = [
     themeKey: 'bronze',
     name: 'Manoj Naik',
     location: 'Bengaluru',
-    prize: '₹10,000',
+    prize: '₹9,000',
     ticketNumber: 'DD-2026-BLR-10K',
-    prizeAmount: '₹10,000',
+    prizeAmount: '₹9,000',
     prizeTitle: '3rd Prize Winner (Bengaluru)',
     drawDate: '10 Nov 2026',
     winnerName: 'Manoj Naik'
@@ -1515,9 +1512,9 @@ const luckyWinnersData = [
     themeKey: 'amber',
     name: 'Keerthi Chowdary',
     location: 'Chennai',
-    prize: '₹10,000',
+    prize: '₹8,500',
     ticketNumber: 'DD-2026-CHN-10K',
-    prizeAmount: '₹10,000',
+    prizeAmount: '₹8,500',
     prizeTitle: '4th Prize Winner (Chennai)',
     drawDate: '10 Nov 2026',
     winnerName: 'Keerthi Chowdary'
@@ -1529,9 +1526,9 @@ const luckyWinnersData = [
     themeKey: 'copper',
     name: 'Akhil Varma',
     location: 'Visakhapatnam',
-    prize: '₹10,000',
+    prize: '₹8,000',
     ticketNumber: 'DD-2026-VSKP-10K',
-    prizeAmount: '₹10,000',
+    prizeAmount: '₹8,000',
     prizeTitle: '5th Prize Winner (Visakhapatnam)',
     drawDate: '10 Nov 2026',
     winnerName: 'Akhil Varma'
@@ -1585,15 +1582,14 @@ const SingleWinnerCard = ({ winner, isActive = false, onSelect }) => {
         }
       }}
       aria-label={`Verify winner ${winner.name} on Winners page`}
-      className={`relative flex flex-col items-center justify-between rounded-2xl transition-all duration-300 cursor-pointer select-none group ${
-        isActive ? 'scale-105 z-10' : ''
-      }`}
+      className={`relative flex flex-col items-center justify-between rounded-2xl transition-all duration-300 cursor-pointer select-none group ${isActive ? 'scale-105 z-10' : ''
+        }`}
       style={{
         transform: tilt.isHovered
           ? `perspective(800px) rotateX(${tilt.y}deg) rotateY(${tilt.x}deg) translateY(-6px) scale(1.025)`
           : isActive
-          ? 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(-4px) scale(1.02)'
-          : 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)',
+            ? 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(-4px) scale(1.02)'
+            : 'perspective(800px) rotateX(0deg) rotateY(0deg) translateY(0px) scale(1)',
         width: '100%',
         maxWidth: '222px',
         minHeight: '304px',
@@ -1602,8 +1598,8 @@ const SingleWinnerCard = ({ winner, isActive = false, onSelect }) => {
         boxShadow: tilt.isHovered
           ? `0 16px 36px rgba(0, 0, 0, 0.65), 0 0 32px ${theme.glow}, inset 0 1px 0 rgba(255, 255, 255, 0.15)`
           : isActive
-          ? `0 12px 28px rgba(0, 0, 0, 0.55), 0 0 24px ${theme.glow}, inset 0 1px 0 rgba(255, 255, 255, 0.12)`
-          : `0 0 20px ${theme.glow}, inset 0 1px 0 rgba(255, 255, 255, 0.08)`,
+            ? `0 12px 28px rgba(0, 0, 0, 0.55), 0 0 24px ${theme.glow}, inset 0 1px 0 rgba(255, 255, 255, 0.12)`
+            : `0 0 20px ${theme.glow}, inset 0 1px 0 rgba(255, 255, 255, 0.08)`,
         backdropFilter: 'blur(10px)',
         WebkitBackdropFilter: 'blur(10px)',
         padding: '12px 10px 10px 10px',
@@ -1774,23 +1770,6 @@ export default function Home() {
   const handleDotClick = (i) => {
     setWinnerSlideIndex(Math.max(0, Math.min(maxWinnerSlide, i)));
   };
-  const [archTilt, setArchTilt] = useState({ rotX: 0, rotY: 0, isHovered: false, mouseX: 50, mouseY: 50 });
-
-  const handleArchMouseMove = (e) => {
-    const rect = e.currentTarget.getBoundingClientRect();
-    const x = e.clientX - rect.left - rect.width / 2;
-    const y = e.clientY - rect.top - rect.height / 2;
-    // Elegant 3D tilt max ±7 degrees
-    const rotX = -((y / (rect.height / 2)) * 7);
-    const rotY = (x / (rect.width / 2)) * 7;
-    const mouseX = Math.round(((e.clientX - rect.left) / rect.width) * 100);
-    const mouseY = Math.round(((e.clientY - rect.top) / rect.height) * 100);
-    setArchTilt({ rotX, rotY, isHovered: true, mouseX, mouseY });
-  };
-
-  const handleArchMouseLeave = () => {
-    setArchTilt({ rotX: 0, rotY: 0, isHovered: false, mouseX: 50, mouseY: 50 });
-  };
 
   useEffect(() => {
     async function loadData() {
@@ -1812,7 +1791,7 @@ export default function Home() {
     scheduledAt: '2026-11-10T13:30:00.000Z',
     displayDate: '10 Nov 2026',
     displayTime: '07:00 PM (IST)',
-    totalPrizePool: '₹85,000+'
+    totalPrizePool: '8 Lakhs+'
   };
 
   // 1. Default Special Offers (3 Colorful Cards matching reference)
@@ -1820,16 +1799,16 @@ export default function Home() {
     {
       id: 'offer-1',
       badge: 'Starter Dhamaka',
-      title: '₹10 Entry',
+      title: '10 Entry',
       subtitle: 'Single Entry Pass',
-      description: 'Enter the grand lucky draw for just ₹10. Quick entry with certified random draw verification.',
+      description: 'Enter the grand lucky draw for just 10. Quick entry with certified random draw verification.',
       features: [
         '1 Verified Digital Ticket',
         'Standard Draw Eligibility',
         'Instant SMS & WhatsApp Confirmation'
       ],
       image: icon2,
-      ctaText: 'Get ₹10 Ticket',
+      ctaText: 'Get 10 Ticket',
       ctaLink: '/participate',
       popular: false
     },
@@ -1858,7 +1837,7 @@ export default function Home() {
       features: [
         '5 Cryptographic Ticket Entries',
         'Priority Draw Queue & VIP Status',
-        'Certified Direct Bank Transfer'
+        'Certified Direct gift delivery'
       ],
       image: giftImg,
       ctaText: 'Unlock Early Bonus',
@@ -1872,8 +1851,8 @@ export default function Home() {
     {
       id: 'gp-1',
       title: '1st Prize',
-      subtitle: 'Grand Bumper ₹50,000',
-      description: 'Direct bank transfer with certified celebration winner trophy.',
+      subtitle: 'Grand Bumper ₹10,000',
+      description: 'Claim the ultimate grand bumper prize of ₹10,000 in gifts! Make this Diwali truly unforgettable with our most exclusive festival offer.',
       image: prizeTrophy,
       animClass: 'animate-trophy-hover',
       auraColor: 'from-[#ffe58f]/40 via-[#c084fc]/30 to-[#f5c64c]/20',
@@ -1888,7 +1867,7 @@ export default function Home() {
       id: 'gp-2',
       title: 'Festival Special',
       subtitle: 'Smart Entertainment Suite',
-      description: '55" 4K Smart TV with Diwali festive family tech hamper.',
+      description: 'Win a premium Smartwatch & Wireless Earbuds combo, plus ₹10,000! Celebrate Diwali with exciting tech rewards and a chance to win big.',
       image: prizeGift,
       animClass: 'animate-gift-hover',
       auraColor: 'from-[#ffe58f]/40 via-[#f87171]/30 to-[#f5c64c]/20',
@@ -1902,8 +1881,8 @@ export default function Home() {
     {
       id: 'gp-3',
       title: 'Early Bird Bonus',
-      subtitle: 'Gold Diya & Cash Hamper',
-      description: 'Handcrafted 24k gold-plated keepsake + ₹10,000 cash credit.',
+      subtitle: 'Smart Home & premium gift',
+      description: 'Take home an Alexa Smart Speaker along with ₹10,000! Be an early bird and secure your chance to win these amazing rewards this Diwali.',
       image: prizeStar,
       animClass: 'animate-star-hover',
       auraColor: 'from-[#ffe58f]/40 via-[#34d399]/30 to-[#f5c64c]/20',
@@ -1921,7 +1900,7 @@ export default function Home() {
     {
       id: 'lp-1',
       rank: '1st Prize',
-      amount: '₹50,000',
+      amount: '₹10,000',
       image: liveTrophyGold,
       isTextPrize: false,
       accent: 'gold',
@@ -1937,7 +1916,7 @@ export default function Home() {
     {
       id: 'lp-2',
       rank: '2nd Prize',
-      amount: '₹25,000',
+      amount: '₹9,500',
       image: liveTrophySilver,
       isTextPrize: false,
       accent: 'blue',
@@ -1953,7 +1932,7 @@ export default function Home() {
     {
       id: 'lp-3',
       rank: '3rd Prize',
-      amount: '₹10,000',
+      amount: '₹9,000',
       image: liveTrophyBronze,
       isTextPrize: false,
       accent: 'bronze',
@@ -2039,7 +2018,7 @@ export default function Home() {
     {
       id: 'faq-3',
       question: 'When and how will I receive my prize money if I win?',
-      answer: 'All cash rewards are transferred directly to verified bank accounts via NEFT/RTGS within 24 to 48 business hours following identity verification and TDS compliance.'
+      answer: 'All premium gifts are transferred directly to verified registered addresses via secure logistics within 24 to 48 business hours following identity verification and TDS compliance.'
     },
     {
       id: 'faq-4',
@@ -2062,7 +2041,7 @@ export default function Home() {
       {/* --------------------------------------------------------------------- */}
       {/* 1. HERO SECTION                                                       */}
       {/* --------------------------------------------------------------------- */}
-      <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-16 overflow-hidden bg-[#050614]">
+      <section className="relative min-h-[92vh] flex items-center justify-center pt-24 pb-0 overflow-hidden bg-[#050614]">
         {/* Hero Background Image Layer */}
         <div
           className="absolute inset-0 bg-contain bg-top bg-no-repeat"
@@ -2089,7 +2068,7 @@ export default function Home() {
                 Dhamaka
               </h1>
 
-              <div className="pt-2 pb-4">
+              <div className="pt-0 pb-4">
                 <img
                   src={luckyDrawImg}
                   alt="Lucky Draw"
@@ -2102,7 +2081,7 @@ export default function Home() {
 
 
             {/* Action CTAs */}
-            <div className="flex flex-col sm:flex-row items-center justify-start gap-4 pt-2 w-full">
+            <div className="-mt-2 flex flex-col sm:flex-row items-center justify-start gap-4 pt-0 w-full">
               <Link
                 to="/participate"
                 className="w-full sm:w-auto px-8 py-3.5 rounded-full font-bold text-sm sm:text-base text-[#0b0d1e] bg-gradient-to-r from-[#ffe58f] via-[#e5b32f] to-[#d4af37] shadow-gold-glow hover:shadow-[0_0_35px_rgba(229,179,47,0.75)] hover:scale-105 active:scale-95 transition-all duration-200 flex items-center justify-center gap-2"
@@ -2118,14 +2097,14 @@ export default function Home() {
               >
                 {/* Impressive Sweeping Glare Animation */}
                 <div className="absolute top-0 bottom-0 left-0 w-16 bg-gradient-to-r from-transparent via-amber-200/30 to-transparent animate-button-sweep"></div>
-                
+
                 <span className="relative z-10 group-hover:text-amber-300 transition-colors duration-300 tracking-wider drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]">VIEW PRIZES</span>
                 <ChevronRight className="w-5 h-5 relative z-10 group-hover:text-amber-300 group-hover:translate-x-1 transition-all duration-300 drop-shadow-[0_2px_4px_rgba(0,0,0,0.8)]" />
               </Link>
             </div>
 
             {/* Trust Badge */}
-            <div className="pt-4 flex flex-col sm:flex-row items-start sm:items-center justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-white/75">
+            <div className="-mt-3 flex flex-col sm:flex-row items-start sm:items-center justify-start gap-4 sm:gap-6 text-xs sm:text-sm text-white/75">
               <div className="flex items-center gap-2">
                 <ShieldCheck className="w-4 h-4 text-emerald-400 drop-shadow-[0_0_8px_rgba(52,211,153,0.6)]" />
                 <span>Safe & Secure Participation</span>
@@ -2142,14 +2121,14 @@ export default function Home() {
         </div>
 
         {/* Countdown Timer positioned at exactly 70% across the screen */}
-        <div className="hidden lg:block absolute bottom-12 left-[60%] -translate-x-1/2 z-20 pointer-events-none">
-          <div className="pointer-events-auto scale-[0.8] sm:scale-90 origin-bottom">
+        <div className="hidden lg:block absolute bottom-4 left-[65%] -translate-x-1/2 z-20 pointer-events-none animate-ribbon-float">
+          <div className="pointer-events-auto scale-[0.8] sm:scale-70 origin-bottom">
             <CountdownTimer targetDate={draw.scheduledAt} />
           </div>
         </div>
 
         {/* Mobile Countdown Timer fallback (centered) */}
-        <div className="lg:hidden absolute bottom-12 left-0 right-0 flex justify-center w-full z-20 pointer-events-none">
+        <div className="lg:hidden absolute bottom-4 left-0 right-0 flex justify-center w-full z-20 pointer-events-none animate-ribbon-float">
           <div className="pointer-events-auto scale-[0.8] sm:scale-90 origin-bottom">
             <CountdownTimer targetDate={draw.scheduledAt} />
           </div>
@@ -2160,7 +2139,7 @@ export default function Home() {
       {/* --------------------------------------------------------------------- */}
       <section
         id="about-draw"
-        className="relative min-h-[640px] md:min-h-[680px] lg:min-h-[700px] xl:min-h-[720px] flex items-center justify-center py-10 sm:py-12 md:py-14 lg:py-16 overflow-hidden border-b border-[#e5b32f]/20"
+        className="relative min-h-[640px] md:min-h-[680px] lg:min-h-[700px] xl:min-h-[720px] flex items-center justify-center pb-10 pt-0 sm:pb-12 sm:pt-0 md:pb-14 md:pt-0 lg:pb-16 lg:pt-0 overflow-hidden border-b border-[#e5b32f]/20"
         style={{
           backgroundImage: `url(${aboutSectionBg})`,
           backgroundRepeat: 'no-repeat',
@@ -2170,54 +2149,24 @@ export default function Home() {
       >
         <div className="w-full max-w-[1400px] mx-auto px-4 sm:px-6 lg:px-10 xl:px-14 relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 md:gap-8 lg:gap-10 xl:gap-14">
-            {/* Left: Ornate Transparent Arch Artwork (~38-40% width) with Interactive 3D Perspective Tilt & Radiant Festive Glow */}
-            <div 
-              className="w-full md:w-[38%] lg:w-[38%] xl:w-[40%] flex flex-col items-center justify-center shrink-0 relative group/arch cursor-pointer"
-              onMouseMove={handleArchMouseMove}
-              onMouseLeave={handleArchMouseLeave}
-              style={{ perspective: '1000px' }}
-            >
-              {/* Radiant Warm Backlight Aura that blooms on hover */}
-              <div 
-                className={`absolute w-[80%] h-[80%] rounded-full pointer-events-none transition-all duration-700 ease-out -z-10 ${
-                  archTilt.isHovered ? 'opacity-85 scale-110 blur-3xl' : 'opacity-35 scale-95 blur-2xl'
-                }`}
+            {/* Left: Ornate Transparent Arch Artwork (~38-40% width) */}
+            <div className="w-full md:w-[38%] lg:w-[38%] xl:w-[40%] flex flex-col items-center justify-center shrink-0 relative">
+              {/* Radiant Warm Backlight Aura */}
+              <div
+                className="absolute w-[80%] h-[80%] rounded-full pointer-events-none -z-10 opacity-35 scale-95 blur-2xl"
                 style={{
                   background: 'radial-gradient(circle, rgba(255, 195, 75, 0.45) 0%, rgba(240, 145, 25, 0.25) 40%, rgba(138, 18, 79, 0.12) 65%, transparent 75%)'
                 }}
               />
 
-              {/* Arch Container with 3D Gyroscopic Tilt & Lighting */}
-              <div
-                className="relative flex items-center justify-center transition-transform ease-out"
-                style={{
-                  transform: archTilt.isHovered
-                    ? `perspective(1000px) rotateX(${archTilt.rotX.toFixed(2)}deg) rotateY(${archTilt.rotY.toFixed(2)}deg) scale3d(1.035, 1.035, 1.035)`
-                    : 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale3d(1, 1, 1)',
-                  transition: archTilt.isHovered ? 'transform 0.12s ease-out' : 'transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1)'
-                }}
-              >
+              {/* Arch Container */}
+              <div className="relative flex items-center justify-center">
                 <img
                   src={aboutSectionArch}
                   alt="Diwali Palace Arch"
-                  className={`w-full max-w-[280px] sm:max-w-[340px] md:max-w-[370px] lg:max-w-[420px] xl:max-w-[460px] max-h-[480px] lg:max-h-[530px] xl:max-h-[560px] h-auto object-contain select-none transition-all duration-500 ${
-                    archTilt.isHovered
-                      ? 'drop-shadow-[0_22px_48px_rgba(217,140,25,0.45)] brightness-105'
-                      : 'drop-shadow-[0_14px_32px_rgba(0,0,0,0.15)]'
-                  }`}
+                  className="w-full max-w-[280px] sm:max-w-[340px] md:max-w-[370px] lg:max-w-[420px] xl:max-w-[460px] max-h-[480px] lg:max-h-[530px] xl:max-h-[560px] h-auto object-contain select-none drop-shadow-[0_14px_32px_rgba(0,0,0,0.15)]"
                   draggable={false}
                 />
-
-                {/* Interactive Dynamic Specular Light Glint following cursor */}
-                {archTilt.isHovered && (
-                  <div
-                    className="absolute inset-0 pointer-events-none rounded-t-[50%] transition-opacity duration-300 mix-blend-screen"
-                    style={{
-                      background: `radial-gradient(circle 160px at ${archTilt.mouseX}% ${archTilt.mouseY}%, rgba(255, 245, 200, 0.35) 0%, rgba(255, 215, 120, 0.15) 40%, transparent 70%)`
-                    }}
-                  />
-                )}
-
               </div>
             </div>
 
@@ -2241,40 +2190,40 @@ export default function Home() {
                 <svg className="w-7 h-6 sm:w-8 sm:h-7 shrink-0 drop-shadow-[0_1px_3px_rgba(200,146,46,0.35)] select-none" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                   <defs>
                     <linearGradient id="lotusGoldCenter" x1="18" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#FFF4A8"/>
-                      <stop offset="30%" stopColor="#F5C042"/>
-                      <stop offset="70%" stopColor="#D98A16"/>
-                      <stop offset="100%" stopColor="#9C5906"/>
+                      <stop offset="0%" stopColor="#FFF4A8" />
+                      <stop offset="30%" stopColor="#F5C042" />
+                      <stop offset="70%" stopColor="#D98A16" />
+                      <stop offset="100%" stopColor="#9C5906" />
                     </linearGradient>
                     <linearGradient id="lotusGoldLeft" x1="7" y1="9" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#FFECA0"/>
-                      <stop offset="40%" stopColor="#EEB236"/>
-                      <stop offset="80%" stopColor="#C47310"/>
-                      <stop offset="100%" stopColor="#8C4A03"/>
+                      <stop offset="0%" stopColor="#FFECA0" />
+                      <stop offset="40%" stopColor="#EEB236" />
+                      <stop offset="80%" stopColor="#C47310" />
+                      <stop offset="100%" stopColor="#8C4A03" />
                     </linearGradient>
                     <linearGradient id="lotusGoldRight" x1="29" y1="9" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#FFECA0"/>
-                      <stop offset="40%" stopColor="#EEB236"/>
-                      <stop offset="80%" stopColor="#C47310"/>
-                      <stop offset="100%" stopColor="#8C4A03"/>
+                      <stop offset="0%" stopColor="#FFECA0" />
+                      <stop offset="40%" stopColor="#EEB236" />
+                      <stop offset="80%" stopColor="#C47310" />
+                      <stop offset="100%" stopColor="#8C4A03" />
                     </linearGradient>
                     <linearGradient id="lotusGoldBottom" x1="18" y1="17" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                      <stop offset="0%" stopColor="#F7C64E"/>
-                      <stop offset="100%" stopColor="#A85E08"/>
+                      <stop offset="0%" stopColor="#F7C64E" />
+                      <stop offset="100%" stopColor="#A85E08" />
                     </linearGradient>
                   </defs>
                   {/* Left Bottom Petal */}
-                  <path d="M18 26C11 26.5 4 23.5 2 20C4.5 17 11 18 18 26Z" fill="url(#lotusGoldBottom)"/>
+                  <path d="M18 26C11 26.5 4 23.5 2 20C4.5 17 11 18 18 26Z" fill="url(#lotusGoldBottom)" />
                   {/* Right Bottom Petal */}
-                  <path d="M18 26C25 26.5 32 23.5 34 20C31.5 17 25 18 18 26Z" fill="url(#lotusGoldBottom)"/>
+                  <path d="M18 26C25 26.5 32 23.5 34 20C31.5 17 25 18 18 26Z" fill="url(#lotusGoldBottom)" />
                   {/* Left Middle Petal */}
-                  <path d="M18 26C14 16 9 11 7 9.5C10 7.5 16 11 18 26Z" fill="url(#lotusGoldLeft)"/>
+                  <path d="M18 26C14 16 9 11 7 9.5C10 7.5 16 11 18 26Z" fill="url(#lotusGoldLeft)" />
                   {/* Right Middle Petal */}
-                  <path d="M18 26C22 16 27 11 29 9.5C26 7.5 20 11 18 26Z" fill="url(#lotusGoldRight)"/>
+                  <path d="M18 26C22 16 27 11 29 9.5C26 7.5 20 11 18 26Z" fill="url(#lotusGoldRight)" />
                   {/* Center Petal */}
-                  <path d="M18 2C15 9 14.5 17 18 26C21.5 17 21 9 18 2Z" fill="url(#lotusGoldCenter)"/>
+                  <path d="M18 2C15 9 14.5 17 18 26C21.5 17 21 9 18 2Z" fill="url(#lotusGoldCenter)" />
                   {/* Center ridge shine */}
-                  <path d="M18 3V24" stroke="#FFF7C2" strokeWidth="0.75" strokeLinecap="round" opacity="0.6"/>
+                  <path d="M18 3V24" stroke="#FFF7C2" strokeWidth="0.75" strokeLinecap="round" opacity="0.6" />
                 </svg>
 
                 {/* Right subtle gold dots */}
@@ -2386,9 +2335,8 @@ export default function Home() {
           {festiveLightDots.map((dot, idx) => (
             <span
               key={idx}
-              className={`absolute rounded-full pointer-events-none ${
-                dot.isFlame ? 'animate-flame-pulse' : 'animate-light-twinkle'
-              }`}
+              className={`absolute rounded-full pointer-events-none ${dot.isFlame ? 'animate-flame-pulse' : 'animate-light-twinkle'
+                }`}
               style={{
                 left: dot.left,
                 top: dot.top,
@@ -2502,10 +2450,10 @@ export default function Home() {
 
                 {/* Connecting Arrow between cards (desktop only) with forward-backward animated flow */}
                 {idx < 3 && (
-                  <div 
+                  <div
                     className="hidden lg:flex absolute top-1/2 left-[calc(100%+8px)] xl:left-[calc(100%+11px)] -translate-x-1/2 -translate-y-1/2 z-40 pointer-events-none"
                   >
-                    <div 
+                    <div
                       className="relative w-8 h-8 xl:w-9 xl:h-9 rounded-full bg-gradient-to-br from-[#281345] via-[#161033] to-[#0a0c20] border-2 border-[#f3c64c] flex items-center justify-center text-[#ffe58f] shadow-[0_0_16px_rgba(243,198,76,0.45),0_4px_12px_rgba(0,0,0,0.8)] animate-connector-glide"
                       style={{
                         animationDelay: `${idx * 0.35}s`
@@ -2513,8 +2461,8 @@ export default function Home() {
                     >
                       {/* Soft ambient ping aura */}
                       <span className="absolute inset-0 rounded-full bg-amber-400/20 animate-ping opacity-60 pointer-events-none" />
-                      <ArrowRight 
-                        className="w-3.5 h-3.5 xl:w-4 xl:h-4 stroke-[2.4] animate-inner-arrow-flow" 
+                      <ArrowRight
+                        className="w-3.5 h-3.5 xl:w-4 xl:h-4 stroke-[2.4] animate-inner-arrow-flow"
                         style={{
                           animationDelay: `${idx * 0.35}s`
                         }}
@@ -2622,34 +2570,34 @@ export default function Home() {
               <svg className="w-5 h-4 sm:w-6 sm:h-5 shrink-0 drop-shadow-[0_1px_3px_rgba(200,146,46,0.3)]" viewBox="0 0 36 30" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <defs>
                   <linearGradient id="lotusGoldCenterSO" x1="18" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#FFF4A8"/>
-                    <stop offset="30%" stopColor="#F5C042"/>
-                    <stop offset="70%" stopColor="#D98A16"/>
-                    <stop offset="100%" stopColor="#9C5906"/>
+                    <stop offset="0%" stopColor="#FFF4A8" />
+                    <stop offset="30%" stopColor="#F5C042" />
+                    <stop offset="70%" stopColor="#D98A16" />
+                    <stop offset="100%" stopColor="#9C5906" />
                   </linearGradient>
                   <linearGradient id="lotusGoldLeftSO" x1="7" y1="9" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#FFECA0"/>
-                    <stop offset="40%" stopColor="#EEB236"/>
-                    <stop offset="80%" stopColor="#C47310"/>
-                    <stop offset="100%" stopColor="#8C4A03"/>
+                    <stop offset="0%" stopColor="#FFECA0" />
+                    <stop offset="40%" stopColor="#EEB236" />
+                    <stop offset="80%" stopColor="#C47310" />
+                    <stop offset="100%" stopColor="#8C4A03" />
                   </linearGradient>
                   <linearGradient id="lotusGoldRightSO" x1="29" y1="9" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#FFECA0"/>
-                    <stop offset="40%" stopColor="#EEB236"/>
-                    <stop offset="80%" stopColor="#C47310"/>
-                    <stop offset="100%" stopColor="#8C4A03"/>
+                    <stop offset="0%" stopColor="#FFECA0" />
+                    <stop offset="40%" stopColor="#EEB236" />
+                    <stop offset="80%" stopColor="#C47310" />
+                    <stop offset="100%" stopColor="#8C4A03" />
                   </linearGradient>
                   <linearGradient id="lotusGoldBottomSO" x1="18" y1="17" x2="18" y2="26" gradientUnits="userSpaceOnUse">
-                    <stop offset="0%" stopColor="#F7C64E"/>
-                    <stop offset="100%" stopColor="#A85E08"/>
+                    <stop offset="0%" stopColor="#F7C64E" />
+                    <stop offset="100%" stopColor="#A85E08" />
                   </linearGradient>
                 </defs>
-                <path d="M18 26C11 26.5 4 23.5 2 20C4.5 17 11 18 18 26Z" fill="url(#lotusGoldBottomSO)"/>
-                <path d="M18 26C25 26.5 32 23.5 34 20C31.5 17 25 18 18 26Z" fill="url(#lotusGoldBottomSO)"/>
-                <path d="M18 26C14 16 9 11 7 9.5C10 7.5 16 11 18 26Z" fill="url(#lotusGoldLeftSO)"/>
-                <path d="M18 26C22 16 27 11 29 9.5C26 7.5 20 11 18 26Z" fill="url(#lotusGoldRightSO)"/>
-                <path d="M18 2C15 9 14.5 17 18 26C21.5 17 21 9 18 2Z" fill="url(#lotusGoldCenterSO)"/>
-                <path d="M18 3V24" stroke="#FFF7C2" strokeWidth="0.75" strokeLinecap="round" opacity="0.6"/>
+                <path d="M18 26C11 26.5 4 23.5 2 20C4.5 17 11 18 18 26Z" fill="url(#lotusGoldBottomSO)" />
+                <path d="M18 26C25 26.5 32 23.5 34 20C31.5 17 25 18 18 26Z" fill="url(#lotusGoldBottomSO)" />
+                <path d="M18 26C14 16 9 11 7 9.5C10 7.5 16 11 18 26Z" fill="url(#lotusGoldLeftSO)" />
+                <path d="M18 26C22 16 27 11 29 9.5C26 7.5 20 11 18 26Z" fill="url(#lotusGoldRightSO)" />
+                <path d="M18 2C15 9 14.5 17 18 26C21.5 17 21 9 18 2Z" fill="url(#lotusGoldCenterSO)" />
+                <path d="M18 3V24" stroke="#FFF7C2" strokeWidth="0.75" strokeLinecap="round" opacity="0.6" />
               </svg>
 
               {/* Eyebrow Text: SPECIAL OFFERS */}
@@ -2854,37 +2802,46 @@ export default function Home() {
       {/* --------------------------------------------------------------------- */}
       {/* 6. GRAND DRAW DETAILS (Live Banner)                                   */}
       {/* --------------------------------------------------------------------- */}
-      <section className="py-8 bg-gradient-to-r from-[#170e2b] via-[#2a133b] to-[#1b102e] border-y border-[#e5b32f]/30">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col lg:flex-row items-center justify-between gap-6">
+      {/* 6. GRAND DRAW DETAILS (Live Banner)                                   */}
+      {/* --------------------------------------------------------------------- */}
+      <section className="relative py-10 my-8 overflow-hidden rounded-3xl mx-4 sm:mx-6 lg:mx-8 border border-[#d4af37]/40 shadow-[0_8px_32px_rgba(212,175,55,0.2)] backdrop-blur-md"
+        style={{
+          background: 'linear-gradient(135deg, rgba(38, 22, 6, 0.82) 0%, rgba(18, 10, 2, 0.92) 100%)',
+        }}
+      >
+        <div className="absolute top-0 inset-x-8 h-[1.5px] bg-gradient-to-r from-transparent via-[#ffe58f]/40 to-transparent pointer-events-none" />
+        <div className="absolute inset-0 -translate-x-full hover:translate-x-full transition-transform duration-1000 ease-in-out bg-gradient-to-r from-transparent via-white/[0.05] to-transparent pointer-events-none" />
+
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="flex flex-col lg:flex-row items-center justify-between gap-8">
             {/* Title & Info */}
-            <div className="flex flex-col sm:flex-row items-center gap-4 text-center sm:text-left">
-              <div className="px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-rose-300 bg-rose-950/80 border border-rose-500/40 flex items-center gap-1.5 animate-pulse">
-                <span className="w-2 h-2 rounded-full bg-rose-500"></span>
+            <div className="flex flex-col sm:flex-row items-center gap-5 text-center sm:text-left">
+              <div className="px-4 py-1.5 rounded-full text-[11px] font-extrabold uppercase tracking-[0.2em] text-[#ff4d4d] bg-[#4a0000]/80 border border-[#ff4d4d]/40 flex items-center gap-2 shadow-[0_0_15px_rgba(255,77,77,0.3)] animate-pulse">
+                <span className="w-2.5 h-2.5 rounded-full bg-[#ff4d4d] shadow-[0_0_8px_#ff4d4d]"></span>
                 LIVE DRAW
               </div>
               <div>
-                <h3 className="font-serif text-2xl font-bold text-[#ffe58f]">
+                <h3 className="font-serif italic font-extrabold text-3xl sm:text-4xl lg:text-[40px] text-transparent bg-clip-text bg-gradient-to-b from-[#ffe58f] via-[#f5c64c] to-[#d4af37] tracking-wider drop-shadow-[0_2px_8px_rgba(0,0,0,0.95)]" style={{ WebkitTextStroke: '1px rgba(229,179,47,0.2)' }}>
                   Grand Draw Details
                 </h3>
-                <div className="flex items-center gap-4 text-xs text-white/70 mt-1">
-                  <span className="flex items-center gap-1">
-                    <Calendar className="w-3.5 h-3.5 text-[#e5b32f]" />
+                <div className="flex items-center justify-center sm:justify-start gap-4 text-[13px] text-white/85 mt-2 font-medium tracking-wide">
+                  <span className="flex items-center gap-1.5">
+                    <Calendar className="w-4 h-4 text-[#e5b32f]" />
                     Date: {draw.displayDate}
                   </span>
-                  <span>•</span>
-                  <span className="flex items-center gap-1">
-                    <Clock className="w-3.5 h-3.5 text-[#e5b32f]" />
+                  <span className="text-[#e5b32f] text-[10px]">◆</span>
+                  <span className="flex items-center gap-1.5">
+                    <Clock className="w-4 h-4 text-[#e5b32f]" />
                     Time: {draw.displayTime}
                   </span>
                 </div>
               </div>
             </div>
 
-            {/* Countdown timer (Banner variant) */}
-            <div className="flex items-center gap-6">
-              <div className="hidden sm:block text-right">
-                <span className="text-[10px] uppercase tracking-widest text-white/60 block">
+            {/* Countdown timer (Premium Banner variant) */}
+            <div className="flex flex-col sm:flex-row items-center gap-6 lg:gap-8">
+              <div className="text-center flex flex-col items-center">
+                <span className="text-[11px] font-bold uppercase tracking-[0.2em] text-[#ffe58f]/70 block mb-2 drop-shadow-md text-center">
                   Countdown to Draw
                 </span>
                 <CountdownTimer targetDate={draw.scheduledAt} variant="banner" />
@@ -2893,11 +2850,12 @@ export default function Home() {
               {/* Watch Draw Live Button */}
               <Link
                 to="/live-draw"
-                className="px-6 py-3 rounded-full font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-red-600 to-rose-700 hover:from-red-500 hover:to-rose-600 shadow-[0_0_20px_rgba(225,29,72,0.6)] flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shrink-0"
+                className="group relative px-7 py-3.5 rounded-full font-bold text-xs sm:text-sm text-white bg-gradient-to-r from-red-600 to-rose-700 shadow-[0_0_20px_rgba(225,29,72,0.6)] flex items-center gap-2 transition-all hover:scale-105 active:scale-95 shrink-0 border border-red-400/30 overflow-hidden"
               >
-                <Flame className="w-4 h-4 text-amber-300 animate-flicker" />
-                <span>WATCH DRAW LIVE</span>
-                <ChevronRight className="w-4 h-4" />
+                <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 ease-in-out bg-gradient-to-r from-transparent via-white/30 to-transparent pointer-events-none" />
+                <Flame className="w-4 h-4 text-amber-300 animate-flicker relative z-10" />
+                <span className="relative z-10 drop-shadow-md tracking-wide">WATCH DRAW LIVE</span>
+                <ChevronRight className="w-4 h-4 relative z-10 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
           </div>
@@ -2949,11 +2907,10 @@ export default function Home() {
               onClick={handlePrevWinner}
               disabled={isWinnerAtStart}
               aria-label="Previous winners"
-              className={`shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 z-20 group ${
-                isWinnerAtStart
-                  ? 'opacity-25 cursor-not-allowed pointer-events-none scale-95'
-                  : 'cursor-pointer text-[#dfb658] hover:text-[#fff6cb] hover:scale-110 active:scale-95'
-              }`}
+              className={`shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 z-20 group ${isWinnerAtStart
+                ? 'opacity-25 cursor-not-allowed pointer-events-none scale-95'
+                : 'cursor-pointer text-[#dfb658] hover:text-[#fff6cb] hover:scale-110 active:scale-95'
+                }`}
               style={{
                 background: 'linear-gradient(180deg, rgba(16, 22, 44, 0.9) 0%, rgba(8, 12, 26, 0.95) 100%)',
                 border: isWinnerAtStart
@@ -3007,11 +2964,10 @@ export default function Home() {
               onClick={handleNextWinner}
               disabled={isWinnerAtEnd}
               aria-label="Next winners"
-              className={`shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 z-20 group ${
-                isWinnerAtEnd
-                  ? 'opacity-25 cursor-not-allowed pointer-events-none scale-95'
-                  : 'cursor-pointer text-[#dfb658] hover:text-[#fff6cb] hover:scale-110 active:scale-95'
-              }`}
+              className={`shrink-0 w-9 h-9 sm:w-11 sm:h-11 rounded-full flex items-center justify-center transition-all duration-300 z-20 group ${isWinnerAtEnd
+                ? 'opacity-25 cursor-not-allowed pointer-events-none scale-95'
+                : 'cursor-pointer text-[#dfb658] hover:text-[#fff6cb] hover:scale-110 active:scale-95'
+                }`}
               style={{
                 background: 'linear-gradient(180deg, rgba(16, 22, 44, 0.9) 0%, rgba(8, 12, 26, 0.95) 100%)',
                 border: isWinnerAtEnd
@@ -3035,11 +2991,10 @@ export default function Home() {
                 key={i}
                 onClick={() => handleDotClick(i)}
                 aria-label={`Go to prize ${i + 1}`}
-                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${
-                  activeWinnerDot === i
-                    ? 'w-7 bg-gradient-to-r from-[#ffeaa0] to-[#dfb658] shadow-[0_0_10px_rgba(223,182,88,0.8)]'
-                    : 'w-2 bg-[#dfb658]/35 hover:bg-[#dfb658]/70 hover:scale-125'
-                }`}
+                className={`h-2 rounded-full transition-all duration-300 cursor-pointer ${activeWinnerDot === i
+                  ? 'w-7 bg-gradient-to-r from-[#ffeaa0] to-[#dfb658] shadow-[0_0_10px_rgba(223,182,88,0.8)]'
+                  : 'w-2 bg-[#dfb658]/35 hover:bg-[#dfb658]/70 hover:scale-125'
+                  }`}
               />
             ))}
           </div>
@@ -3085,41 +3040,56 @@ export default function Home() {
       {/* --------------------------------------------------------------------- */}
       {/* 8. FREQUENTLY ASKED QUESTIONS (Light Cream Section)                   */}
       {/* --------------------------------------------------------------------- */}
-      <section className="py-20 bg-[#fdf9f0] border-b border-[#e5b32f]/15 relative">
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-xs font-bold uppercase tracking-widest text-[#d97706]">
-              Got Questions?
-            </span>
-            <h2 className="font-serif text-3xl sm:text-4xl font-bold text-[#27284f] mt-1">
+      <section className="relative w-full overflow-hidden bg-[#060918] py-16 sm:py-20 border-t border-b border-[#dfb658]/20">
+        {/* Subtle radial glow */}
+        <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,rgba(223,182,88,0.08)_0%,transparent_70%)] pointer-events-none"></div>
+
+        <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center">
+
+          {/* Section Heading & Subtitle */}
+          <div className="flex flex-col items-center justify-center text-center mb-10 sm:mb-12">
+            <SectionHeaderCrown className="w-10 h-7 sm:w-11 sm:h-8 mb-2" />
+            <h2 className="font-serif text-3xl sm:text-4xl lg:text-[40px] font-bold text-white tracking-wide leading-tight drop-shadow-[0_2px_12px_rgba(0,0,0,0.85)]">
               Frequently Asked Questions
             </h2>
-            <p className="text-xs sm:text-sm text-[#515372] mt-2">
-              Find answers to the most common questions about participation, tickets, and draws.
-            </p>
+            <div className="flex items-center justify-center gap-2.5 sm:gap-3.5 mt-2">
+              <div className="flex items-center gap-1.5 opacity-85">
+                <div className="w-6 sm:w-10 h-[1px] bg-gradient-to-r from-transparent to-[#dfb658]" />
+                <div className="w-1.5 h-1.5 rotate-45 bg-[#dfb658]" />
+                <div className="w-3.5 h-[1px] bg-[#dfb658]" />
+              </div>
+              <p className="text-xs sm:text-sm font-sans tracking-wide text-[#cbd5e1] font-medium uppercase">
+                Find answers & get started
+              </p>
+              <div className="flex items-center gap-1.5 opacity-85">
+                <div className="w-3.5 h-[1px] bg-[#dfb658]" />
+                <div className="w-1.5 h-1.5 rotate-45 bg-[#dfb658]" />
+                <div className="w-6 sm:w-10 h-[1px] bg-gradient-to-l from-transparent to-[#dfb658]" />
+              </div>
+            </div>
           </div>
 
-          <div className="space-y-3.5">
+          <div className="w-full space-y-4">
             {faqs.map((faq, idx) => {
               const isOpen = activeFaq === idx;
               return (
                 <div
                   key={faq.id}
-                  className="rounded-2xl bg-white border border-[#ebdcb5] overflow-hidden shadow-[0_2px_8px_rgba(0,0,0,0.02)] hover:border-[#dfb658] transition-all"
+                  className={`rounded-2xl overflow-hidden transition-all duration-300 border ${isOpen ? 'bg-gradient-to-b from-[#141633] to-[#0c0e22] border-[#dfb658] shadow-[0_4px_25px_rgba(223,182,88,0.15)]' : 'bg-[#0c0e22]/80 border-[#2a2e57] hover:border-[#dfb658]/50'} shadow-[0_4px_15px_rgba(0,0,0,0.4)] backdrop-blur-sm`}
                 >
                   <button
                     onClick={() => setActiveFaq(isOpen ? null : idx)}
-                    className="w-full p-5 text-left flex items-center justify-between gap-4 focus:outline-none"
+                    className="w-full px-5 sm:px-6 py-5 text-left flex items-center justify-between gap-4 focus:outline-none"
                   >
-                    <span className="font-serif text-sm sm:text-base font-semibold text-[#27284f]">
+                    <span className={`font-serif text-[15px] sm:text-[16px] tracking-wide transition-colors ${isOpen ? 'text-[#f5c64c] font-bold' : 'text-[#cbd5e1] font-medium hover:text-white'}`}>
                       {faq.question}
                     </span>
-                    <span className={`text-xl font-bold text-[#b45309] transition-transform duration-200 ${isOpen ? 'rotate-45' : ''}`}>
+                    <span className={`text-xl font-bold text-[#dfb658] transition-transform duration-300 flex-shrink-0 ${isOpen ? 'rotate-45 text-[#f5c64c]' : ''}`}>
                       +
                     </span>
                   </button>
                   {isOpen && (
-                    <div className="px-5 pb-5 text-xs sm:text-sm text-[#515372] leading-relaxed border-t border-[#f3ead7] pt-3 bg-[#fffefc]">
+                    <div className="px-5 sm:px-6 pb-6 pt-1 text-[13.5px] sm:text-[14px] text-[#94a3b8] font-sans leading-relaxed border-t border-[#dfb658]/10 mt-2 pt-4">
                       {faq.answer}
                     </div>
                   )}
@@ -3128,13 +3098,13 @@ export default function Home() {
             })}
           </div>
 
-          <div className="text-center mt-8">
+          <div className="text-center mt-10">
             <Link
               to="/faq"
-              className="inline-flex items-center gap-1.5 text-xs font-bold text-[#862544] hover:underline"
+              className="inline-flex items-center gap-2 text-xs sm:text-sm font-bold text-[#dfb658] hover:text-[#f5c64c] transition-all group tracking-widest uppercase border-[1.5px] border-[#dfb658]/40 px-7 py-3.5 rounded-full hover:bg-[#dfb658]/10 hover:border-[#dfb658] hover:shadow-[0_0_15px_rgba(223,182,88,0.2)]"
             >
-              <span>View All Frequently Asked Questions</span>
-              <ChevronRight className="w-4 h-4" />
+              <span>View All Questions</span>
+              <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
         </div>
@@ -3143,7 +3113,16 @@ export default function Home() {
       {/* --------------------------------------------------------------------- */}
       {/* 9. FINAL CALL TO ACTION (Grand Festive Golden Section)                */}
       {/* --------------------------------------------------------------------- */}
-      <section className="relative py-20 bg-gradient-to-b from-[#180f2d] via-[#240e34] to-[#140b24] text-center overflow-hidden border-t border-[#e5b32f]/40">
+      <section
+        className="relative py-20 text-center overflow-hidden border-t border-[#e5b32f]/40"
+        style={{
+          backgroundImage: `url(${howItWorksBg})`,
+          backgroundSize: 'cover',
+          backgroundPosition: 'center center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="absolute inset-0 bg-[#060918]/75"></div>
         <FestiveParticles count={20} />
         <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6">
           <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full bg-[#ffe58f]/10 border border-[#e5b32f]/30 text-xs text-[#ffe58f] font-semibold uppercase tracking-wider mb-4">

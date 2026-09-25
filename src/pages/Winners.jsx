@@ -150,204 +150,24 @@ const getTierTheme = (tier) => {
 };
 
 const defaultVerifiedWinners = [
-  {
-    id: 1,
-    ticketNumber: 'DD-2026-HYD-50K',
-    winnerName: 'Rohith Kumar',
-    maskedName: 'Rohith K****',
-    prizeTitle: '1st Prize Champion (Hyderabad)',
-    prizeAmount: '₹50,000',
-    tier: 'gold',
-    drawDate: '10 Nov 2026',
-    city: 'Hyderabad'
-  },
-  {
-    id: 2,
-    ticketNumber: 'DD-2026-VIJ-25K',
-    winnerName: 'Sravani Reddy',
-    maskedName: 'Sravani R****',
-    prizeTitle: '2nd Prize Winner (Vijayawada)',
-    prizeAmount: '₹25,000',
-    tier: 'silver',
-    drawDate: '10 Nov 2026',
-    city: 'Vijayawada'
-  },
-  {
-    id: 3,
-    ticketNumber: 'DD-2026-BLR-10K',
-    winnerName: 'Manoj Naik',
-    maskedName: 'Manoj N****',
-    prizeTitle: '3rd Prize Winner (Bengaluru)',
-    prizeAmount: '₹10,000',
-    tier: 'bronze',
-    drawDate: '10 Nov 2026',
-    city: 'Bengaluru'
-  },
-  {
-    id: 4,
-    ticketNumber: 'DD-2026-CHN-10K',
-    winnerName: 'Keerthi Chowdary',
-    maskedName: 'Keerthi C****',
-    prizeTitle: '4th Prize Winner (Chennai)',
-    prizeAmount: '₹10,000',
-    tier: 'gold',
-    drawDate: '10 Nov 2026',
-    city: 'Chennai'
-  },
-  {
-    id: 5,
-    ticketNumber: 'DD-2026-VSKP-10K',
-    winnerName: 'Akhil Varma',
-    maskedName: 'Akhil V****',
-    prizeTitle: '5th Prize Winner (Visakhapatnam)',
-    prizeAmount: '₹10,000',
-    tier: 'purple',
-    drawDate: '10 Nov 2026',
-    city: 'Visakhapatnam'
-  },
-  {
-    id: 6,
-    ticketNumber: 'DD-2026-MUM-5K',
-    winnerName: 'Ananya Sharma',
-    maskedName: 'Ananya S****',
-    prizeTitle: 'Special Diwali Bonanza Winner',
-    prizeAmount: '₹5,000',
-    tier: 'purple',
-    drawDate: '10 Nov 2026',
-    city: 'Mumbai'
-  },
-  {
-    id: 7,
-    ticketNumber: 'DD-2026-DEL-50K',
-    winnerName: 'Vikramaditya Singh',
-    maskedName: 'Vikram S****',
-    prizeTitle: 'Diwali Grand Bumper Champion',
-    prizeAmount: '₹50,000',
-    tier: 'gold',
-    drawDate: '10 Nov 2026',
-    city: 'New Delhi'
-  },
-  {
-    id: 8,
-    ticketNumber: 'DD-2026-PUN-25K',
-    winnerName: 'Pooja Deshmukh',
-    maskedName: 'Pooja D****',
-    prizeTitle: 'Festive Silver Champion (Pune)',
-    prizeAmount: '₹25,000',
-    tier: 'silver',
-    drawDate: '10 Nov 2026',
-    city: 'Pune'
-  },
-  {
-    id: 9,
-    ticketNumber: 'DD-2026-JPR-10K',
-    winnerName: 'Arjun Rathore',
-    maskedName: 'Arjun R****',
-    prizeTitle: 'Royal Heritage Lucky Winner',
-    prizeAmount: '₹10,000',
-    tier: 'bronze',
-    drawDate: '10 Nov 2026',
-    city: 'Jaipur'
-  },
-  {
-    id: 10,
-    ticketNumber: 'DD-2026-KOC-25K',
-    winnerName: 'Meera Nambiar',
-    maskedName: 'Meera N****',
-    prizeTitle: 'Kerala Festive Bonanza Winner',
-    prizeAmount: '₹25,000',
-    tier: 'silver',
-    drawDate: '10 Nov 2026',
-    city: 'Kochi'
-  },
-  {
-    id: 11,
-    ticketNumber: 'DD-2026-AHM-10K',
-    winnerName: 'Devang Patel',
-    maskedName: 'Devang P****',
-    prizeTitle: 'Gujarat Dhamaka Prize Winner',
-    prizeAmount: '₹10,000',
-    tier: 'gold',
-    drawDate: '10 Nov 2026',
-    city: 'Ahmedabad'
-  },
-  {
-    id: 12,
-    ticketNumber: 'DD-2026-IND-5K',
-    winnerName: 'Neha Kulkarni',
-    maskedName: 'Neha K****',
-    prizeTitle: 'Special Festive Lucky Draw',
-    prizeAmount: '₹5,000',
-    tier: 'purple',
-    drawDate: '10 Nov 2026',
-    city: 'Indore'
-  },
-  {
-    id: 13,
-    ticketNumber: 'DD-2026-KOL-25K',
-    winnerName: 'Subhash Bose',
-    maskedName: 'Subhash B****',
-    prizeTitle: 'Joy of Lights Silver Winner',
-    prizeAmount: '₹25,000',
-    tier: 'silver',
-    drawDate: '10 Nov 2026',
-    city: 'Kolkata'
-  },
-  {
-    id: 14,
-    ticketNumber: 'DD-2026-SUR-10K',
-    winnerName: 'Ketan Mehta',
-    maskedName: 'Ketan M****',
-    prizeTitle: 'Diamond City Lucky Ticket Winner',
-    prizeAmount: '₹10,000',
-    tier: 'bronze',
-    drawDate: '10 Nov 2026',
-    city: 'Surat'
-  },
-  {
-    id: 15,
-    ticketNumber: 'DD-2026-LKO-10K',
-    winnerName: 'Prateek Shukla',
-    maskedName: 'Prateek S****',
-    prizeTitle: 'Nawabi Diwali Lucky Draw Winner',
-    prizeAmount: '₹10,000',
-    tier: 'bronze',
-    drawDate: '10 Nov 2026',
-    city: 'Lucknow'
-  },
-  {
-    id: 16,
-    ticketNumber: 'DD-2026-CHD-25K',
-    winnerName: 'Simran Kaur',
-    maskedName: 'Simran K****',
-    prizeTitle: 'Northern Lights Silver Champion',
-    prizeAmount: '₹25,000',
-    tier: 'silver',
-    drawDate: '10 Nov 2026',
-    city: 'Chandigarh'
-  },
-  {
-    id: 17,
-    ticketNumber: 'DD-2026-BHO-5K',
-    winnerName: 'Rishi Trivedi',
-    maskedName: 'Rishi T****',
-    prizeTitle: 'Madhya Pradesh Bonanza Winner',
-    prizeAmount: '₹5,000',
-    tier: 'purple',
-    drawDate: '10 Nov 2026',
-    city: 'Bhopal'
-  },
-  {
-    id: 18,
-    ticketNumber: 'DD-2026-BBI-10K',
-    winnerName: 'Swati Mohanty',
-    maskedName: 'Swati M****',
-    prizeTitle: 'Temple City Golden Draw Winner',
-    prizeAmount: '₹10,000',
-    tier: 'gold',
-    drawDate: '10 Nov 2026',
-    city: 'Bhubaneswar'
-  }
+  // --- GOLD TIER: 1st to 5th Prize ---
+  { id: 1, ticketNumber: 'DD-2026-HYD-50K', winnerName: 'Rohith Kumar', maskedName: 'Rohith K****', prizeTitle: '1st Prize', prizeAmount: '₹10,000', tier: 'gold', drawDate: '10 Nov 2026', city: 'Hyderabad' },
+  { id: 2, ticketNumber: 'DD-2026-VIJ-25K', winnerName: 'Sravani Reddy', maskedName: 'Sravani R****', prizeTitle: '2nd Prize', prizeAmount: '₹9,500', tier: 'gold', drawDate: '10 Nov 2026', city: 'Vijayawada' },
+  { id: 3, ticketNumber: 'DD-2026-BLR-10K', winnerName: 'Manoj Naik', maskedName: 'Manoj N****', prizeTitle: '3rd Prize', prizeAmount: '₹9,000', tier: 'gold', drawDate: '10 Nov 2026', city: 'Bengaluru' },
+  { id: 4, ticketNumber: 'DD-2026-CHN-10K', winnerName: 'Keerthi Chowdary', maskedName: 'Keerthi C****', prizeTitle: '4th Prize', prizeAmount: '₹8,500', tier: 'gold', drawDate: '10 Nov 2026', city: 'Chennai' },
+  { id: 5, ticketNumber: 'DD-2026-VSKP-10K', winnerName: 'Akhil Varma', maskedName: 'Akhil V****', prizeTitle: '5th Prize', prizeAmount: '₹8,000', tier: 'gold', drawDate: '10 Nov 2026', city: 'Visakhapatnam' },
+  // --- SILVER TIER: 6th to 10th Prize ---
+  { id: 6, ticketNumber: 'DD-2026-MUM-5K', winnerName: 'Ananya Sharma', maskedName: 'Ananya S****', prizeTitle: '6th Prize', prizeAmount: '₹7,500', tier: 'silver', drawDate: '10 Nov 2026', city: 'Mumbai' },
+  { id: 7, ticketNumber: 'DD-2026-DEL-50K', winnerName: 'Vikramaditya Singh', maskedName: 'Vikram S****', prizeTitle: '7th Prize', prizeAmount: '₹7,000', tier: 'silver', drawDate: '10 Nov 2026', city: 'New Delhi' },
+  { id: 8, ticketNumber: 'DD-2026-PUN-25K', winnerName: 'Pooja Deshmukh', maskedName: 'Pooja D****', prizeTitle: '8th Prize', prizeAmount: '₹6,500', tier: 'silver', drawDate: '10 Nov 2026', city: 'Pune' },
+  { id: 9, ticketNumber: 'DD-2026-JPR-10K', winnerName: 'Arjun Rathore', maskedName: 'Arjun R****', prizeTitle: '9th Prize', prizeAmount: '₹6,000', tier: 'silver', drawDate: '10 Nov 2026', city: 'Jaipur' },
+  { id: 10, ticketNumber: 'DD-2026-KOC-25K', winnerName: 'Meera Nambiar', maskedName: 'Meera N****', prizeTitle: '10th Prize', prizeAmount: '₹5,500', tier: 'silver', drawDate: '10 Nov 2026', city: 'Kochi' },
+  // --- BRONZE TIER: Festival Special Lucky Draw ---
+  { id: 11, ticketNumber: 'DD-2026-AHM-10K', winnerName: 'Devang Patel', maskedName: 'Devang P****', prizeTitle: 'Festival Special', prizeAmount: '₹10,000', offerTag: '3X Entries • Triple Chances', tier: 'bronze', drawDate: '10 Nov 2026', city: 'Ahmedabad' },
+  { id: 12, ticketNumber: 'DD-2026-IND-5K', winnerName: 'Neha Kulkarni', maskedName: 'Neha K****', prizeTitle: 'Festival Special', prizeAmount: '₹10,000', offerTag: '3X Entries • Triple Chances', tier: 'bronze', drawDate: '10 Nov 2026', city: 'Indore' },
+  // --- PURPLE TIER: Early Bird Bonus Lucky Draw ---
+  { id: 13, ticketNumber: 'DD-2026-KOL-25K', winnerName: 'Subhash Bose', maskedName: 'Subhash B****', prizeTitle: 'Early Bird Bonus', prizeAmount: '₹10,000', offerTag: '5X Entries • VIP Bumper Pool', tier: 'purple', drawDate: '10 Nov 2026', city: 'Kolkata' },
+  { id: 14, ticketNumber: 'DD-2026-SUR-10K', winnerName: 'Ketan Mehta', maskedName: 'Ketan M****', prizeTitle: 'Early Bird Bonus', prizeAmount: '₹10,000', offerTag: '5X Entries • VIP Bumper Pool', tier: 'purple', drawDate: '10 Nov 2026', city: 'Surat' }
 ];
 
 export default function Winners() {
@@ -438,51 +258,259 @@ export default function Winners() {
               background-size: max(100%, 1024px) auto !important;
             }
           }
+          @keyframes wn-shimmer {
+            0% { transform: translateX(-100%); }
+            100% { transform: translateX(200%); }
+          }
+          @keyframes wn-pulse-glow {
+            0%, 100% { opacity: 0.7; }
+            50% { opacity: 1; }
+          }
+          .wn-tier-btn {
+            position: relative; overflow: hidden;
+            transition: transform 0.25s cubic-bezier(0.34,1.56,0.64,1), box-shadow 0.25s ease, border-color 0.25s ease;
+          }
+          .wn-tier-btn::before {
+            content: '';
+            position: absolute; top: 0; left: 0; right: 0; height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.35), transparent);
+            pointer-events: none;
+          }
+          .wn-tier-btn .wn-shimmer {
+            position: absolute; top: 0; left: 0; right: 0; bottom: 0;
+            background: linear-gradient(105deg, transparent 30%, rgba(255,255,255,0.15) 50%, transparent 70%);
+            animation: wn-shimmer 2.8s ease infinite;
+            pointer-events: none;
+          }
+          .wn-tier-btn:hover { transform: translateY(-2px) scale(1.05); }
+          .wn-tier-btn.active { transform: translateY(-2px) scale(1.08); }
+          .wn-tier-btn.active .wn-active-glow {
+            animation: wn-pulse-glow 2s ease infinite;
+          }
         `}</style>
         <div className="pt-8 sm:pt-10 lg:pt-12 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       {/* Header */}
-      <div className="text-center max-w-3xl mx-auto space-y-3 mb-12">
-        <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#1e143b] border border-[#e5b32f]/40 text-[#ffe58f] text-xs font-semibold tracking-wider uppercase shadow-gold-glow">
-          <Trophy className="w-3.5 h-3.5 text-amber-400" />
-          <span>Hall of Fame</span>
+      <div className="text-center max-w-3xl mx-auto mb-12" style={{ fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+
+        {/* Hall of Fame badge */}
+        <div style={{ display: 'inline-flex', alignItems: 'center', gap: '8px', marginBottom: '20px' }}>
+          <div style={{
+            display: 'inline-flex', alignItems: 'center', gap: '8px',
+            padding: '6px 18px', borderRadius: '999px',
+            background: 'linear-gradient(135deg, rgba(30,20,59,0.9) 0%, rgba(20,12,40,0.95) 100%)',
+            border: '1px solid rgba(229,179,47,0.5)',
+            boxShadow: '0 0 18px rgba(229,179,47,0.25), inset 0 1px 0 rgba(255,229,143,0.12)'
+          }}>
+            <Trophy className="w-3.5 h-3.5" style={{ color: '#f5c64c' }} />
+            <span style={{
+              color: '#ffe58f', fontSize: '11px', fontWeight: '700',
+              letterSpacing: '0.2em', textTransform: 'uppercase'
+            }}>Hall of Fame</span>
+          </div>
         </div>
-        <h1 className="font-serif text-4xl sm:text-5xl font-extrabold gold-gradient-text tracking-wide">
+
+        {/* Diamond ornament row */}
+        <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: '12px', marginBottom: '16px' }}>
+          <div style={{ height: '1px', width: '60px', background: 'linear-gradient(to right, transparent, rgba(212,175,55,0.7))' }} />
+          <div style={{ width: '7px', height: '7px', transform: 'rotate(45deg)', background: '#f5c64c', boxShadow: '0 0 10px rgba(245,198,76,0.9)' }} />
+          <div style={{ width: '5px', height: '5px', transform: 'rotate(45deg)', border: '1.5px solid rgba(245,198,76,0.55)' }} />
+          <div style={{ width: '7px', height: '7px', transform: 'rotate(45deg)', background: '#f5c64c', boxShadow: '0 0 10px rgba(245,198,76,0.9)' }} />
+          <div style={{ height: '1px', width: '60px', background: 'linear-gradient(to left, transparent, rgba(212,175,55,0.7))' }} />
+        </div>
+
+        {/* Main Title */}
+        <h1 style={{
+          fontFamily: "'Georgia', 'Times New Roman', serif",
+          fontSize: 'clamp(2.8rem, 7vw, 4.5rem)',
+          fontWeight: '900',
+          fontStyle: 'italic',
+          letterSpacing: '-0.01em',
+          lineHeight: '1.1',
+          marginBottom: '16px',
+          background: 'linear-gradient(135deg, #fff7cc 0%, #f5c64c 35%, #ffe58f 55%, #c8922e 80%, #f5c64c 100%)',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundClip: 'text',
+          filter: 'drop-shadow(0 2px 20px rgba(245,198,76,0.3))',
+          WebkitTextStroke: '0.5px rgba(229,179,47,0.2)'
+        }}>
           Verified Winners
         </h1>
-        <p className="text-sm sm:text-base text-white/70">
-          Real people, verified lucky tickets, and guaranteed disbursements. Click any card to re-live their winning announcement!
+
+        {/* Bottom divider line */}
+        <div style={{ height: '1px', width: '180px', margin: '0 auto 18px', background: 'linear-gradient(to right, transparent, rgba(245,198,76,0.55), transparent)' }} />
+
+        {/* Subtitle */}
+        <p style={{
+          fontSize: 'clamp(13px, 2vw, 15px)',
+          color: 'rgba(226,232,240,0.8)',
+          fontFamily: "'Inter', 'Segoe UI', sans-serif",
+          fontWeight: '400',
+          lineHeight: '1.75',
+          letterSpacing: '0.03em',
+          maxWidth: '540px',
+          margin: '0 auto'
+        }}>
+          Real people, verified lucky tickets, and guaranteed disbursements.{' '}
+          <span style={{ color: '#f5c64c', fontWeight: '600' }}>
+            Click any card to re-live their winning announcement!
+          </span>
         </p>
       </div>
 
       {/* Filter & Search Bar */}
-      <div className="p-4 rounded-2xl bg-[#131533] border border-[#e5b32f]/20 mb-10 flex flex-col md:flex-row items-center justify-between gap-4">
-        {/* Search */}
-        <div className="relative w-full md:w-96">
-          <Search className="w-4 h-4 text-white/40 absolute left-3.5 top-1/2 -translate-y-1/2" />
-          <input
-            type="text"
-            placeholder="Search by ticket # or name..."
-            value={search}
-            onChange={(e) => setSearch(e.target.value)}
-            className="w-full pl-10 pr-4 py-2.5 rounded-xl bg-[#090b1c] border border-white/10 text-sm text-white placeholder-white/40 focus:outline-none focus:border-[#e5b32f]"
-          />
-        </div>
+      <div className="relative mb-10">
+        {/* Glowing border ring */}
+        <div style={{
+          position: 'absolute', inset: '-1.5px', borderRadius: '18px',
+          background: 'linear-gradient(90deg, rgba(212,175,55,0.7) 0%, rgba(255,229,143,0.5) 50%, rgba(212,175,55,0.7) 100%)',
+          filter: 'blur(2px)', pointerEvents: 'none', zIndex: 0
+        }} />
+        <div style={{
+          position: 'relative', zIndex: 1,
+          background: 'linear-gradient(135deg, rgba(15,13,40,0.96) 0%, rgba(8,9,28,0.98) 60%, rgba(14,11,36,0.96) 100%)',
+          backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)',
+          border: '1px solid rgba(245,198,76,0.35)',
+          borderRadius: '16px',
+          boxShadow: '0 8px 40px rgba(0,0,0,0.7), 0 0 24px rgba(212,175,55,0.12), inset 0 1px 0 rgba(255,229,143,0.15)'
+        }} className="p-5 flex flex-col md:flex-row items-center justify-between gap-4 overflow-hidden">
 
-        {/* Category Filter Tabs */}
-        <div className="flex items-center gap-2 w-full md:w-auto overflow-x-auto pb-1 md:pb-0">
-          {['all', 'gold', 'silver', 'bronze', 'purple'].map((tier) => (
-            <button
-              key={tier}
-              onClick={() => setSelectedTier(tier)}
-              className={`px-4 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all whitespace-nowrap ${
-                selectedTier === tier
-                  ? 'bg-gradient-to-r from-[#ffe58f] to-[#e5b32f] text-[#0b0d1e] font-bold shadow-gold-glow'
-                  : 'bg-[#1b1e42] text-white/70 hover:text-white'
-              }`}
-            >
-              {tier === 'all' ? 'All Tiers' : `${tier} Tier`}
-            </button>
-          ))}
+          {/* Top sheen line */}
+          <div style={{
+            position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px',
+            background: 'linear-gradient(90deg, transparent, rgba(245,198,76,0.6), transparent)',
+            borderRadius: '50%', pointerEvents: 'none'
+          }} />
+
+          {/* Search Input */}
+          <div className="relative w-full md:w-96">
+            <Search className="w-4 h-4 absolute left-3.5 top-1/2 -translate-y-1/2" style={{ color: 'rgba(245,198,76,0.6)' }} />
+            <input
+              type="text"
+              placeholder="Search by ticket # or name..."
+              value={search}
+              onChange={(e) => setSearch(e.target.value)}
+              style={{
+                width: '100%', paddingLeft: '2.5rem', paddingRight: '1rem',
+                paddingTop: '0.75rem', paddingBottom: '0.75rem',
+                background: 'rgba(4,5,18,0.9)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                borderRadius: '12px', outline: 'none',
+                color: 'white', fontSize: '13px', fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                fontWeight: '500', letterSpacing: '0.04em',
+                transition: 'border-color 0.3s, box-shadow 0.3s'
+              }}
+              onFocus={e => { e.target.style.borderColor = 'rgba(245,198,76,0.55)'; e.target.style.boxShadow = '0 0 0 3px rgba(245,198,76,0.1)'; }}
+              onBlur={e => { e.target.style.borderColor = 'rgba(255,255,255,0.1)'; e.target.style.boxShadow = 'none'; }}
+            />
+          </div>
+
+          {/* Category Filter Tabs — Per-Tier Glassmorphism */}
+          <div className="wn-filter-tabs flex items-center gap-2.5 w-full md:w-auto overflow-visible">
+            {[
+              {
+                tier: 'all',
+                label: 'All Tiers',
+                activeGrad: 'linear-gradient(135deg, #ffe58f 0%, #f5c64c 45%, #d4af37 100%)',
+                activeBorder: 'rgba(245,198,76,0.8)',
+                activeGlow: '0 0 22px rgba(245,198,76,0.65), 0 4px 14px rgba(0,0,0,0.4)',
+                activeColor: '#0b0d1e',
+                idleGrad: 'linear-gradient(135deg, rgba(30,22,60,0.85) 0%, rgba(18,14,42,0.9) 100%)',
+                idleBorder: 'rgba(245,198,76,0.25)',
+                idleGlow: '0 2px 10px rgba(0,0,0,0.4)',
+                idleColor: 'rgba(255,229,143,0.75)',
+                icon: '✦'
+              },
+              {
+                tier: 'gold',
+                label: 'Gold Tier',
+                activeGrad: 'linear-gradient(135deg, #ffd700 0%, #e5b32f 50%, #b8860b 100%)',
+                activeBorder: 'rgba(229,179,47,0.9)',
+                activeGlow: '0 0 24px rgba(229,179,47,0.7), 0 4px 14px rgba(0,0,0,0.4)',
+                activeColor: '#1a0a00',
+                idleGrad: 'linear-gradient(135deg, rgba(40,28,8,0.85) 0%, rgba(26,16,4,0.9) 100%)',
+                idleBorder: 'rgba(229,179,47,0.3)',
+                idleGlow: '0 2px 10px rgba(0,0,0,0.4)',
+                idleColor: 'rgba(229,179,47,0.8)',
+                icon: '🥇'
+              },
+              {
+                tier: 'silver',
+                label: 'Silver Tier',
+                activeGrad: 'linear-gradient(135deg, #e8e8e8 0%, #c0c0c0 50%, #909090 100%)',
+                activeBorder: 'rgba(192,192,192,0.9)',
+                activeGlow: '0 0 22px rgba(192,192,192,0.55), 0 4px 14px rgba(0,0,0,0.4)',
+                activeColor: '#0d0d0d',
+                idleGrad: 'linear-gradient(135deg, rgba(28,30,42,0.85) 0%, rgba(18,20,30,0.9) 100%)',
+                idleBorder: 'rgba(192,192,192,0.25)',
+                idleGlow: '0 2px 10px rgba(0,0,0,0.4)',
+                idleColor: 'rgba(192,192,192,0.75)',
+                icon: '🥈'
+              },
+              {
+                tier: 'bronze',
+                label: 'Bronze Tier',
+                activeGrad: 'linear-gradient(135deg, #f4a460 0%, #cd7f32 50%, #8b4513 100%)',
+                activeBorder: 'rgba(205,127,50,0.9)',
+                activeGlow: '0 0 22px rgba(205,127,50,0.65), 0 4px 14px rgba(0,0,0,0.4)',
+                activeColor: '#1a0800',
+                idleGrad: 'linear-gradient(135deg, rgba(38,20,8,0.85) 0%, rgba(24,12,4,0.9) 100%)',
+                idleBorder: 'rgba(205,127,50,0.3)',
+                idleGlow: '0 2px 10px rgba(0,0,0,0.4)',
+                idleColor: 'rgba(244,164,96,0.8)',
+                icon: '🥉'
+              },
+              {
+                tier: 'purple',
+                label: 'Purple Tier',
+                activeGrad: 'linear-gradient(135deg, #d8b4fe 0%, #a855f7 50%, #7c3aed 100%)',
+                activeBorder: 'rgba(168,85,247,0.9)',
+                activeGlow: '0 0 24px rgba(168,85,247,0.65), 0 4px 14px rgba(0,0,0,0.4)',
+                activeColor: '#1a0030',
+                idleGrad: 'linear-gradient(135deg, rgba(30,12,50,0.85) 0%, rgba(20,8,36,0.9) 100%)',
+                idleBorder: 'rgba(168,85,247,0.3)',
+                idleGlow: '0 2px 10px rgba(0,0,0,0.4)',
+                idleColor: 'rgba(216,180,254,0.8)',
+                icon: '💜'
+              }
+            ].map(({ tier, label, activeGrad, activeBorder, activeGlow, activeColor, idleGrad, idleBorder, idleGlow, idleColor, icon }) => {
+              const isActive = selectedTier === tier;
+              return (
+                <button
+                  key={tier}
+                  onClick={() => setSelectedTier(tier)}
+                  className={`wn-tier-btn ${isActive ? 'active' : ''}`}
+                  style={{
+                    background: isActive ? activeGrad : idleGrad,
+                    color: isActive ? activeColor : idleColor,
+                    border: `1px solid ${isActive ? activeBorder : idleBorder}`,
+                    boxShadow: isActive ? activeGlow : idleGlow,
+                    backdropFilter: 'blur(12px)',
+                    WebkitBackdropFilter: 'blur(12px)',
+                    fontWeight: '800', fontSize: '11px',
+                    letterSpacing: '0.13em', textTransform: 'uppercase',
+                    padding: '9px 15px', borderRadius: '11px',
+                    whiteSpace: 'nowrap', cursor: 'pointer',
+                    fontFamily: "'Inter', 'Segoe UI', sans-serif",
+                    display: 'inline-flex', alignItems: 'center', gap: '5px'
+                  }}
+                >
+                  {/* Shimmer overlay */}
+                  <span className="wn-shimmer" />
+                  {/* Active glow ring */}
+                  {isActive && (
+                    <span className="wn-active-glow" style={{
+                      position: 'absolute', inset: '-1px', borderRadius: '12px',
+                      border: `1px solid ${activeBorder}`,
+                      opacity: 0.7, pointerEvents: 'none'
+                    }} />
+                  )}
+                  <span style={{ fontSize: '12px', lineHeight: 1 }}>{icon}</span>
+                  <span>{label}</span>
+                </button>
+              );
+            })}
+          </div>
         </div>
       </div>
 
@@ -562,6 +590,17 @@ export default function Winners() {
                     <div className={`font-serif text-3xl sm:text-4xl font-black ${theme.prizeGradient} bg-clip-text text-transparent tracking-tight group-hover:scale-[1.02] transition-transform origin-left drop-shadow-[0_2px_10px_rgba(0,0,0,0.4)]`}>
                       {winner.prizeAmount}
                     </div>
+                    {/* Offer Feature Tag — shown only for bronze/purple tier cards */}
+                    {winner.offerTag && (
+                      <div className={`inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg text-[10px] sm:text-[11px] font-bold tracking-wide ${
+                        winner.tier === 'bronze'
+                          ? 'bg-orange-950/70 border border-orange-500/40 text-orange-200'
+                          : 'bg-purple-950/70 border border-purple-400/40 text-purple-200'
+                      }`}>
+                        <Sparkles className="w-3 h-3 shrink-0" />
+                        <span>{winner.offerTag}</span>
+                      </div>
+                    )}
                     <div className="flex items-center justify-between pt-1">
                       <h3 className={`text-lg sm:text-xl font-bold text-white/95 font-serif tracking-wide ${theme.nameHoverText} transition-colors`}>
                         {winner.maskedName}
@@ -598,73 +637,107 @@ export default function Winners() {
 
       {/* Numbered Pagination Structure */}
       {winners.length > 0 && (
-        <div className="mt-12 flex flex-col sm:flex-row items-center justify-between gap-4 p-4 rounded-2xl bg-[#131533]/85 border border-[#e5b32f]/25 shadow-lg backdrop-blur-md">
-          {/* Summary / Range */}
-          <div className="text-xs sm:text-sm text-white/70 flex items-center gap-1.5 font-medium">
-            <span>Showing</span>
-            <span className="font-bold text-[#ffe58f]">{startIndex + 1}</span>
-            <span>–</span>
-            <span className="font-bold text-[#ffe58f]">
-              {Math.min(startIndex + itemsPerPage, winners.length)}
-            </span>
-            <span>of</span>
-            <span className="font-bold text-[#ffe58f]">{winners.length}</span>
-            <span>Verified Winners</span>
-          </div>
+        <div className="mt-12 relative">
+          {/* Glowing border ring */}
+          <div style={{
+            position: 'absolute', inset: '-1.5px', borderRadius: '18px',
+            background: 'linear-gradient(90deg, rgba(212,175,55,0.6) 0%, rgba(255,229,143,0.4) 50%, rgba(212,175,55,0.6) 100%)',
+            filter: 'blur(2px)', pointerEvents: 'none', zIndex: 0
+          }} />
+          <div style={{
+            position: 'relative', zIndex: 1,
+            background: 'linear-gradient(135deg, rgba(15,13,40,0.96) 0%, rgba(8,9,28,0.98) 60%, rgba(14,11,36,0.96) 100%)',
+            backdropFilter: 'blur(24px)', WebkitBackdropFilter: 'blur(24px)',
+            border: '1px solid rgba(245,198,76,0.30)',
+            borderRadius: '16px',
+            boxShadow: '0 8px 40px rgba(0,0,0,0.7), 0 0 24px rgba(212,175,55,0.1), inset 0 1px 0 rgba(255,229,143,0.12)'
+          }} className="flex flex-col sm:flex-row items-center justify-between gap-4 p-4 sm:p-5">
 
-          {/* Number Navigation Buttons */}
-          <div className="flex items-center gap-1.5 sm:gap-2">
-            {/* Previous Page Button */}
-            <button
-              onClick={() => {
-                if (currentPage > 1) {
-                  setCurrentPage((prev) => prev - 1);
-                  window.scrollTo({ top: 250, behavior: 'smooth' });
-                }
-              }}
-              disabled={currentPage === 1}
-              className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all border border-white/10 disabled:opacity-30 disabled:cursor-not-allowed bg-[#1b1e42] text-white/80 hover:text-white hover:border-[#e5b32f]/50 hover:bg-[#232757]"
-              aria-label="Previous Page"
-            >
-              <ChevronLeft className="w-4 h-4" />
-              <span className="hidden sm:inline">Prev</span>
-            </button>
+            {/* Top sheen line */}
+            <div style={{
+              position: 'absolute', top: 0, left: '10%', right: '10%', height: '1px',
+              background: 'linear-gradient(90deg, transparent, rgba(245,198,76,0.5), transparent)',
+              pointerEvents: 'none'
+            }} />
 
-            {/* Numbered Buttons */}
-            {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+            {/* Summary / Range */}
+            <div style={{ display: 'flex', alignItems: 'center', gap: '6px', fontFamily: "'Inter', 'Segoe UI', sans-serif" }}>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '13px', fontWeight: '500', letterSpacing: '0.03em' }}>Showing</span>
+              <span style={{ color: '#ffe58f', fontSize: '16px', fontWeight: '800', fontFamily: 'Georgia, serif' }}>{startIndex + 1}</span>
+              <span style={{ color: 'rgba(245,198,76,0.5)', fontSize: '14px', fontWeight: '300', margin: '0 1px' }}>–</span>
+              <span style={{ color: '#ffe58f', fontSize: '16px', fontWeight: '800', fontFamily: 'Georgia, serif' }}>
+                {Math.min(startIndex + itemsPerPage, winners.length)}
+              </span>
+              <span style={{ color: 'rgba(255,255,255,0.55)', fontSize: '13px', fontWeight: '500' }}>of</span>
+              <span style={{ color: '#ffe58f', fontSize: '16px', fontWeight: '800', fontFamily: 'Georgia, serif' }}>{winners.length}</span>
+              <span style={{ color: 'rgba(255,255,255,0.75)', fontSize: '11px', fontWeight: '700', letterSpacing: '0.14em', textTransform: 'uppercase', marginLeft: '2px' }}>Verified Winners</span>
+            </div>
+
+            {/* Number Navigation Buttons */}
+            <div className="flex items-center gap-1.5 sm:gap-2">
               <button
-                key={pageNum}
-                onClick={() => {
-                  setCurrentPage(pageNum);
-                  window.scrollTo({ top: 250, behavior: 'smooth' });
+                onClick={() => { if (currentPage > 1) { setCurrentPage((prev) => prev - 1); window.scrollTo({ top: 250, behavior: 'smooth' }); } }}
+                disabled={currentPage === 1}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '6px',
+                  padding: '8px 16px', borderRadius: '10px',
+                  background: 'rgba(16,18,52,0.85)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  color: 'rgba(255,255,255,0.7)', fontSize: '11px',
+                  fontWeight: '800', letterSpacing: '0.14em', textTransform: 'uppercase',
+                  cursor: 'pointer', transition: 'all 0.3s', opacity: currentPage === 1 ? 0.3 : 1
                 }}
-                className={`w-9 h-9 sm:w-10 sm:h-10 rounded-xl text-xs sm:text-sm font-bold flex items-center justify-center transition-all duration-200 ${
-                  currentPage === pageNum
-                    ? 'bg-gradient-to-r from-[#ffe58f] via-[#e5b32f] to-[#d4af37] text-[#0b0d1e] shadow-gold-glow scale-105 ring-2 ring-[#ffe58f]/40'
-                    : 'bg-[#1b1e42] text-white/70 hover:text-white hover:border-[#e5b32f]/50 hover:bg-[#232757] border border-white/10'
-                }`}
-                aria-label={`Go to page ${pageNum}`}
-                aria-current={currentPage === pageNum ? 'page' : undefined}
+                aria-label="Previous Page"
               >
-                {pageNum}
+                <ChevronLeft className="w-3.5 h-3.5" />
+                <span className="hidden sm:inline">Prev</span>
               </button>
-            ))}
 
-            {/* Next Page Button */}
-            <button
-              onClick={() => {
-                if (currentPage < totalPages) {
-                  setCurrentPage((prev) => prev + 1);
-                  window.scrollTo({ top: 250, behavior: 'smooth' });
-                }
-              }}
-              disabled={currentPage === totalPages}
-              className="inline-flex items-center gap-1 px-3.5 py-2 rounded-xl text-xs font-semibold uppercase tracking-wider transition-all border border-white/10 disabled:opacity-30 disabled:cursor-not-allowed bg-[#1b1e42] text-white/80 hover:text-white hover:border-[#e5b32f]/50 hover:bg-[#232757]"
-              aria-label="Next Page"
-            >
-              <span className="hidden sm:inline">Next</span>
-              <ChevronRight className="w-4 h-4" />
-            </button>
+              {Array.from({ length: totalPages }, (_, i) => i + 1).map((pageNum) => (
+                <button
+                  key={pageNum}
+                  onClick={() => { setCurrentPage(pageNum); window.scrollTo({ top: 250, behavior: 'smooth' }); }}
+                  style={currentPage === pageNum ? {
+                    width: '40px', height: '40px', borderRadius: '10px',
+                    background: 'linear-gradient(160deg, #ffe58f 0%, #f5c64c 50%, #d4af37 100%)',
+                    color: '#0b0d1e', fontWeight: '900', fontSize: '15px',
+                    fontFamily: 'Georgia, serif',
+                    border: 'none', cursor: 'pointer',
+                    boxShadow: '0 0 20px rgba(245,198,76,0.55), 0 4px 12px rgba(0,0,0,0.3)',
+                    transform: 'scale(1.12)', transition: 'all 0.3s'
+                  } : {
+                    width: '40px', height: '40px', borderRadius: '10px',
+                    background: 'rgba(16,18,52,0.85)',
+                    color: 'rgba(255,255,255,0.65)', fontWeight: '700', fontSize: '14px',
+                    fontFamily: 'Georgia, serif',
+                    border: '1px solid rgba(255,255,255,0.1)',
+                    cursor: 'pointer', transition: 'all 0.3s'
+                  }}
+                  aria-label={`Go to page ${pageNum}`}
+                  aria-current={currentPage === pageNum ? 'page' : undefined}
+                >
+                  {pageNum}
+                </button>
+              ))}
+
+              <button
+                onClick={() => { if (currentPage < totalPages) { setCurrentPage((prev) => prev + 1); window.scrollTo({ top: 250, behavior: 'smooth' }); } }}
+                disabled={currentPage === totalPages}
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: '6px',
+                  padding: '8px 16px', borderRadius: '10px',
+                  background: 'rgba(16,18,52,0.85)',
+                  border: '1px solid rgba(255,255,255,0.1)',
+                  color: 'rgba(255,255,255,0.7)', fontSize: '11px',
+                  fontWeight: '800', letterSpacing: '0.14em', textTransform: 'uppercase',
+                  cursor: 'pointer', transition: 'all 0.3s', opacity: currentPage === totalPages ? 0.3 : 1
+                }}
+                aria-label="Next Page"
+              >
+                <span className="hidden sm:inline">Next</span>
+                <ChevronRight className="w-3.5 h-3.5" />
+              </button>
+            </div>
           </div>
         </div>
       )}

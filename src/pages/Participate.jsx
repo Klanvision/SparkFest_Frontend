@@ -113,7 +113,7 @@ export default function Participate() {
                 Enter Diwali Dhamaka Lucky Draw
               </h2>
               <p className="text-xs sm:text-sm text-white/70">
-                Join thousands of verified participants for a chance to win up to ₹50,000 cash.
+                Join thousands of verified participants for a chance to win up to Premium Gold Coin gifts.
               </p>
             </div>
 
@@ -193,7 +193,7 @@ export default function Participate() {
                 </label>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   {[
-                    { id: 'ten_entry', title: '₹10 Entry', desc: 'Standard Single Ticket' },
+                    { id: 'ten_entry', title: 'ticket Entry', desc: 'Standard Single Ticket' },
                     { id: 'festival_special', title: 'Festival Special', desc: 'Bonus Entry Ticket' },
                     { id: 'early_bird', title: 'Early Bird', desc: 'Priority Reward Tier' }
                   ].map((tier) => (

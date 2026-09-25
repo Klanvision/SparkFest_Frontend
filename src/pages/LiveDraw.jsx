@@ -3,6 +3,7 @@ import { Flame, Trophy, Play, Sparkles, ShieldCheck, Users, Clock, Calendar, Che
 import { api } from '../services/api';
 import CountdownTimer from '../components/common/CountdownTimer';
 import WinnerAnnouncementModal from '../components/common/WinnerAnnouncementModal';
+import contactPageBg from '../../Images/contact-page-bg.png';
 
 export default function LiveDraw() {
   const [currentDraw, setCurrentDraw] = useState(null);
@@ -47,7 +48,7 @@ export default function LiveDraw() {
           maskedName: 'R*** S***',
           ticketNumber: 'DD-2026-45872',
           prizeTitle: '1st Prize',
-          prizeAmount: '₹50,000',
+          prizeAmount: 'Premium Gold Coin',
           drawDate: '10 Nov 2026'
         };
 
@@ -68,80 +69,171 @@ export default function LiveDraw() {
     scheduledAt: '2026-11-10T13:30:00.000Z',
     status: 'SCHEDULED',
     totalParticipants: 4280,
-    totalPrizePool: '₹85,000+'
+    totalPrizePool: 'Exclusive'
   };
 
   return (
-    <div className="pt-28 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="pt-[68px] sm:pt-[76px] lg:pt-[80px] w-full">
+      <div
+        className="w-full flex flex-col justify-start overflow-x-hidden pb-10"
+        style={{
+          backgroundImage: `url(${contactPageBg})`,
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
+          backgroundRepeat: 'no-repeat'
+        }}
+      >
+        <div className="pt-6 sm:pt-8 lg:pt-10 pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start flex-1 mb-0">
       {/* Top Live Stage Banner */}
-      <div className="p-8 sm:p-12 rounded-3xl bg-gradient-to-b from-[#21113c] via-[#151739] to-[#090b1c] border-2 border-[#e5b32f]/40 shadow-2xl text-center relative overflow-hidden mb-12">
-        <div className="inline-flex items-center gap-2 px-4 py-1 rounded-full text-xs font-bold uppercase tracking-widest text-rose-300 bg-rose-950/80 border border-rose-500/40 mb-4 animate-pulse">
-          <span className="w-2.5 h-2.5 rounded-full bg-rose-500"></span>
-          <span>OFFICIAL LIVE DRAW ROOM</span>
+      <div className="text-center relative mb-16 pt-10">
+        <div className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-xs font-bold uppercase tracking-widest text-[#ffe58f] bg-amber-500/10 border border-[#e5b32f]/40 mb-6 shadow-[0_0_15px_rgba(245,198,76,0.3)] animate-pulse">
+          <span className="w-2.5 h-2.5 rounded-full bg-[#f5c64c] shadow-[0_0_8px_rgba(245,198,76,0.8)]"></span>
+          <span>GLOBAL BROADCAST EVENT</span>
         </div>
 
-        <h1 className="font-serif text-3xl sm:text-5xl font-extrabold gold-gradient-text tracking-wide mb-2">
-          {draw.name}
-        </h1>
-        <p className="text-xs sm:text-sm text-white/70 max-w-xl mx-auto mb-6">
-          Scheduled Broadcast: {draw.displayDate} at {draw.displayTime}. Verified cryptographic pseudorandom ticket selection engine.
+        <div className="flex flex-col items-center gap-3 mb-6">
+          <h1 className="font-serif italic font-extrabold text-[42px] sm:text-[56px] lg:text-[68px] tracking-wider drop-shadow-[0_4px_15px_rgba(0,0,0,0.9)]"
+            style={{
+              background: 'linear-gradient(135deg, #fff7cc 0%, #f5c64c 35%, #d4af37 65%, #c8922e 100%)',
+              WebkitBackgroundClip: 'text',
+              WebkitTextFillColor: 'transparent',
+              WebkitTextStroke: '1px rgba(245, 198, 76, 0.3)',
+              lineHeight: '1.2'
+            }}>
+            {draw.name}
+          </h1>
+          <div className="flex items-center justify-center gap-2 mt-2">
+            <div className="h-[1px] w-24 bg-gradient-to-r from-transparent to-[#d4af37]" />
+            <div className="w-2 h-2 rotate-45 bg-[#f5c64c] shadow-[0_0_12px_rgba(245,198,76,0.9)]" />
+            <div className="h-[1px] w-24 bg-gradient-to-l from-transparent to-[#d4af37]" />
+          </div>
+        </div>
+
+        <p className="text-sm sm:text-base text-white/80 max-w-2xl mx-auto mb-10 font-medium tracking-wide leading-relaxed">
+          Join the exclusive live selection event on <span className="text-[#ffe58f] font-bold">{draw.displayDate}</span> at <span className="text-[#ffe58f] font-bold">{draw.displayTime}</span>. Experience transparency with our verified cryptographic pseudorandom ticket engine.
         </p>
 
         {/* Live Countdown in Stage */}
-        <div className="mb-8">
+        <div className="mb-12 sm:scale-110 origin-top">
           <CountdownTimer targetDate={draw.scheduledAt} />
         </div>
 
-        {/* Stage Ticket Drum Machine */}
-        <div className="max-w-md mx-auto p-6 rounded-2xl bg-[#090b1c] border-2 border-[#e5b32f]/60 shadow-[0_0_40px_rgba(229,179,47,0.35)] space-y-4">
-          <span className="text-[11px] uppercase tracking-widest text-white/50 font-semibold block">
-            Cryptographic Rolling Drum
-          </span>
-          <div className="py-4 px-6 rounded-xl bg-[#141738] border border-[#e5b32f]/40 font-mono text-2xl sm:text-3xl font-black text-[#ffe58f] tracking-widest shadow-inner">
-            {drumNumber}
+        {/* Impressive Broadcast Status replacing the Drum */}
+        <div className="max-w-xl mx-auto p-8 sm:p-10 rounded-[2rem] relative overflow-hidden group/status"
+          style={{
+            background: 'linear-gradient(135deg, rgba(20, 16, 40, 0.4) 0%, rgba(10, 9, 28, 0.6) 100%)',
+            backdropFilter: 'blur(24px)',
+            WebkitBackdropFilter: 'blur(24px)',
+            border: '1px solid rgba(245, 198, 76, 0.25)',
+            boxShadow: '0 0 40px rgba(0, 0, 0, 0.5), inset 0 0 20px rgba(245, 198, 76, 0.05)'
+          }}>
+          <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(245,198,76,0.15),transparent_70%)] blur-2xl" />
+          <div className="absolute top-0 inset-x-8 h-[1px] bg-gradient-to-r from-transparent via-[#f5c64c]/40 to-transparent pointer-events-none" />
+          
+          <h3 className="font-serif text-2xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#ffe58f] to-[#d4af37] mb-3">
+            Awaiting Broadcast Initialization
+          </h3>
+          <p className="text-white/70 text-sm leading-relaxed mb-8">
+            The cryptographic drawing algorithm is securely locked until the scheduled time. When the broadcast begins, the engine will select verified winners in real-time directly from our administration hub.
+          </p>
+          <div className="inline-flex items-center justify-center gap-3 px-5 py-2 rounded-xl bg-amber-500/10 border border-amber-500/20 shadow-inner">
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.8)] animate-ping absolute" />
+            <span className="w-2.5 h-2.5 rounded-full bg-amber-400 shadow-[0_0_10px_rgba(245,158,11,0.8)] relative" />
+            <span className="text-amber-300/90 text-[11px] font-black uppercase tracking-[0.2em]">Secure System Ready</span>
           </div>
-
-          <button
-            onClick={handleSimulateDraw}
-            disabled={isDrawing}
-            className="w-full py-3.5 rounded-full font-bold text-xs sm:text-sm text-[#0b0d1e] bg-gradient-to-r from-[#ffe58f] via-[#e5b32f] to-[#d4af37] shadow-gold-glow hover:scale-[1.02] active:scale-95 transition-all flex items-center justify-center gap-2"
-          >
-            <Play className={`w-4 h-4 fill-current ${isDrawing ? 'animate-spin' : ''}`} />
-            <span>{isDrawing ? 'DRAWING RANDOM WINNER...' : 'SIMULATE LIVE DRAW DRAWING'}</span>
-          </button>
         </div>
       </div>
 
       {/* Verified Draw Guarantees */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
-        <div className="p-6 rounded-2xl bg-[#131533] border border-white/10 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-purple-900/50 flex items-center justify-center text-[#ffe58f] shrink-0 border border-purple-400/20">
-            <ShieldCheck className="w-6 h-6 text-emerald-400" />
+        {/* Box 1 - Green Theme (Provably Fair RNG) */}
+        <div className="flex flex-col items-center text-center p-8 rounded-[1.25rem] relative overflow-hidden group/card"
+          style={{
+            background: 'linear-gradient(180deg, rgba(6, 20, 15, 0.95) 0%, rgba(3, 11, 8, 0.98) 100%)',
+            border: '1px solid rgba(16, 185, 129, 0.25)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          }}>
+          <div className="absolute -bottom-10 inset-x-12 h-20 bg-emerald-500/20 blur-[24px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-24 h-[3px] bg-gradient-to-r from-transparent via-emerald-400 to-transparent blur-[1px]" />
+          
+          <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6 relative">
+            <div className="absolute inset-0 rounded-full border border-emerald-500/40 shadow-[0_0_15px_rgba(16,185,129,0.25)]" />
+            <ShieldCheck className="w-6 h-6 text-emerald-400 relative z-10" />
           </div>
-          <div>
-            <h4 className="font-serif font-bold text-sm text-[#ffe58f]">Provably Fair RNG</h4>
-            <p className="text-xs text-white/60">Independent cryptographically seed-based draw algorithms.</p>
+
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <h4 className="font-serif italic font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-emerald-100 to-emerald-400">
+              Provably Fair RNG
+            </h4>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-emerald-500/70" />
+              <div className="w-1.5 h-1.5 rotate-45 bg-emerald-400 shadow-[0_0_8px_rgba(16,185,129,0.8)]" />
+              <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-emerald-500/70" />
+            </div>
           </div>
+          <p className="text-[13px] text-white/70 leading-relaxed font-medium">
+            Independent cryptographically seed-based draw algorithms.
+          </p>
         </div>
 
-        <div className="p-6 rounded-2xl bg-[#131533] border border-white/10 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-purple-900/50 flex items-center justify-center text-[#ffe58f] shrink-0 border border-purple-400/20">
-            <Trophy className="w-6 h-6 text-amber-400" />
+        {/* Box 2 - Blue Theme (Exclusive Prize Pool) */}
+        <div className="flex flex-col items-center text-center p-8 rounded-[1.25rem] relative overflow-hidden group/card"
+          style={{
+            background: 'linear-gradient(180deg, rgba(8, 14, 30, 0.95) 0%, rgba(4, 7, 18, 0.98) 100%)',
+            border: '1px solid rgba(59, 130, 246, 0.25)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          }}>
+          <div className="absolute -bottom-10 inset-x-12 h-20 bg-blue-500/20 blur-[24px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-24 h-[3px] bg-gradient-to-r from-transparent via-blue-400 to-transparent blur-[1px]" />
+          
+          <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6 relative">
+            <div className="absolute inset-0 rounded-full border border-blue-500/40 shadow-[0_0_15px_rgba(59,130,246,0.25)]" />
+            <Trophy className="w-6 h-6 text-blue-400 relative z-10" />
           </div>
-          <div>
-            <h4 className="font-serif font-bold text-sm text-[#ffe58f]">₹85,000+ Prize Pool</h4>
-            <p className="text-xs text-white/60">Tier 1, Tier 2, Tier 3 and 10+ festive reward hampers.</p>
+
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <h4 className="font-serif italic font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-blue-100 to-blue-400">
+              Exclusive Prize Pool
+            </h4>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-blue-500/70" />
+              <div className="w-1.5 h-1.5 rotate-45 bg-blue-400 shadow-[0_0_8px_rgba(59,130,246,0.8)]" />
+              <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-blue-500/70" />
+            </div>
           </div>
+          <p className="text-[13px] text-white/70 leading-relaxed font-medium">
+            Tier 1, Tier 2, Tier 3 and 10+ festive reward hampers.
+          </p>
         </div>
 
-        <div className="p-6 rounded-2xl bg-[#131533] border border-white/10 flex items-center gap-4">
-          <div className="w-12 h-12 rounded-xl bg-purple-900/50 flex items-center justify-center text-[#ffe58f] shrink-0 border border-purple-400/20">
-            <Users className="w-6 h-6 text-[#e5b32f]" />
+        {/* Box 3 - Pink Theme (4,280+ Confirmed) */}
+        <div className="flex flex-col items-center text-center p-8 rounded-[1.25rem] relative overflow-hidden group/card"
+          style={{
+            background: 'linear-gradient(180deg, rgba(28, 8, 14, 0.95) 0%, rgba(16, 4, 8, 0.98) 100%)',
+            border: '1px solid rgba(244, 63, 94, 0.25)',
+            boxShadow: '0 10px 30px rgba(0,0,0,0.5)'
+          }}>
+          <div className="absolute -bottom-10 inset-x-12 h-20 bg-rose-500/20 blur-[24px] rounded-full pointer-events-none" />
+          <div className="absolute bottom-0 inset-x-24 h-[3px] bg-gradient-to-r from-transparent via-rose-400 to-transparent blur-[1px]" />
+          
+          <div className="w-14 h-14 rounded-full flex items-center justify-center mb-6 relative">
+            <div className="absolute inset-0 rounded-full border border-rose-500/40 shadow-[0_0_15px_rgba(244,63,94,0.25)]" />
+            <Users className="w-6 h-6 text-rose-400 relative z-10" />
           </div>
-          <div>
-            <h4 className="font-serif font-bold text-sm text-[#ffe58f]">4,280+ Confirmed</h4>
-            <p className="text-xs text-white/60">Registered participants entering this festival draw.</p>
+
+          <div className="flex flex-col items-center gap-2 mb-4">
+            <h4 className="font-serif italic font-bold text-xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-rose-100 to-rose-400">
+              4,280+ Confirmed
+            </h4>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-[1px] w-8 bg-gradient-to-r from-transparent to-rose-500/70" />
+              <div className="w-1.5 h-1.5 rotate-45 bg-rose-400 shadow-[0_0_8px_rgba(244,63,94,0.8)]" />
+              <div className="h-[1px] w-8 bg-gradient-to-l from-transparent to-rose-500/70" />
+            </div>
           </div>
+          <p className="text-[13px] text-white/70 leading-relaxed font-medium">
+            Registered participants entering this festival draw.
+          </p>
         </div>
       </div>
 
@@ -151,6 +243,8 @@ export default function LiveDraw() {
         isOpen={!!selectedWinner}
         onClose={() => setSelectedWinner(null)}
       />
+        </div>
+      </div>
     </div>
   );
 }

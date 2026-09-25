@@ -23,6 +23,8 @@ import TermsConditions from './pages/TermsConditions';
 import ResponsibleParticipation from './pages/ResponsibleParticipation';
 import AdminDashboard from './pages/AdminDashboard';
 import NotFound from './pages/NotFound';
+import RefundPolicy from './pages/RefundPolicy';
+import ShoppingPolicy from './pages/ShoppingPolicy';
 
 // Auto scroll to top on navigation with smooth behavior
 function ScrollToTop() {
@@ -63,6 +65,8 @@ export default function App() {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<TermsConditions />} />
             <Route path="/responsible-participation" element={<ResponsibleParticipation />} />
+            <Route path="/refund-policy" element={<RefundPolicy />} />
+            <Route path="/shopping-policy" element={<ShoppingPolicy />} />
             <Route path="/admin" element={<AdminDashboard />} />
             <Route path="*" element={<NotFound />} />
           </Routes>

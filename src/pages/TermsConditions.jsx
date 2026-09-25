@@ -1,19 +1,49 @@
 import React from 'react';
 import { ShieldCheck } from 'lucide-react';
+import howItWorksBg from '../../Images/how-it-works-background.png';
 
 export default function TermsConditions() {
   return (
-    <div className="pt-28 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="p-8 sm:p-12 rounded-3xl bg-[#141634] border border-[#e5b32f]/30 space-y-8 text-white/80 leading-relaxed text-sm">
-        <div className="border-b border-white/10 pb-6">
-          <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#201542] border border-[#e5b32f]/30 text-[#ffe58f] text-xs font-semibold uppercase mb-3">
+    <div
+      className="w-full pt-[68px] sm:pt-[76px] lg:pt-[80px]"
+      style={{
+        backgroundImage: `url(${howItWorksBg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center top',
+        backgroundRepeat: 'repeat-y'
+      }}
+    >
+      <div className="pt-6 sm:pt-10 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8 text-white/80 leading-relaxed text-sm">
+
+        {/* Header */}
+        <div className="text-center pb-8 border-b border-white/10">
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-[#201542] border border-[#e5b32f]/30 text-[#ffe58f] text-xs font-semibold uppercase mb-5 shadow-[0_0_15px_rgba(245,198,76,0.15)]">
             <ShieldCheck className="w-3.5 h-3.5 text-amber-400" />
             <span>Governance & Rules</span>
           </div>
-          <h1 className="font-serif text-3xl sm:text-4xl font-extrabold gold-gradient-text">
-            Terms & Conditions
-          </h1>
-          <p className="text-xs text-white/50 mt-1">Effective: Diwali 2026</p>
+
+          <div className="flex flex-col items-center gap-3">
+            <h1
+              className="font-serif italic font-extrabold text-[36px] sm:text-[46px] lg:text-[56px] tracking-wider drop-shadow-[0_4px_15px_rgba(0,0,0,0.9)]"
+              style={{
+                background: 'linear-gradient(135deg, #fff7cc 0%, #f5c64c 35%, #d4af37 65%, #c8922e 100%)',
+                WebkitBackgroundClip: 'text',
+                WebkitTextFillColor: 'transparent',
+                WebkitTextStroke: '1px rgba(245, 198, 76, 0.3)',
+                lineHeight: '1.2'
+              }}
+            >
+              Terms & Conditions
+            </h1>
+            <div className="flex items-center justify-center gap-2 mt-1">
+              <div className="h-[1px] w-20 bg-gradient-to-r from-transparent to-[#d4af37]" />
+              <div className="w-2 h-2 rotate-45 bg-[#f5c64c] shadow-[0_0_12px_rgba(245,198,76,0.9)]" />
+              <div className="h-[1px] w-20 bg-gradient-to-l from-transparent to-[#d4af37]" />
+            </div>
+            <p className="text-sm sm:text-base text-white/60 mt-2 tracking-wide font-medium italic">
+              Effective: Diwali 2026
+            </p>
+          </div>
         </div>
 
         <section className="space-y-3">
@@ -33,7 +63,7 @@ export default function TermsConditions() {
         <section className="space-y-3">
           <h2 className="font-serif text-xl font-bold text-[#ffe58f]">3. Prize Disbursements</h2>
           <p>
-            Prize amounts are disbursed via direct electronic bank transfer (NEFT/RTGS). Winners must furnish valid government-issued photo identification (Aadhaar, Passport, or PAN Card) matching their registered registration name within 30 calendar days of draw broadcast.
+            Prize amounts are disbursed via direct electronic secure gift delivery (trusted logistic partners). Winners must furnish valid government-issued photo identification (Aadhaar, Passport, or PAN Card) matching their registered registration name within 30 calendar days of draw broadcast.
           </p>
         </section>
 
@@ -43,6 +73,7 @@ export default function TermsConditions() {
             Winnings are subject to applicable Indian Income Tax Act withholding (TDS) under section 194B where prize amounts exceed statutory threshold limits. Net amounts will be disbursed with official TDS certificates.
           </p>
         </section>
+
       </div>
     </div>
   );

@@ -46,35 +46,32 @@ export default function CountdownTimer({ targetDate, onStatusChange, variant = '
 
   // Variant: Banner (Compact horizontal as in reference image Grand Draw banner)
   if (variant === 'banner') {
+    const timeBlocks = [
+      { label: 'Days', value: pad(timeLeft.days) },
+      { label: 'Hours', value: pad(timeLeft.hours) },
+      { label: 'Minutes', value: pad(timeLeft.minutes) },
+      { label: 'Seconds', value: pad(timeLeft.seconds) }
+    ];
+
     return (
-      <div className="flex items-center gap-3 sm:gap-4">
-        <div className="text-center">
-          <div className="text-xl sm:text-2xl font-bold font-mono text-[#ffe58f] tracking-wider">
-            {pad(timeLeft.days)}
-          </div>
-          <div className="text-[9px] uppercase tracking-wider text-white/60">Days</div>
-        </div>
-        <span className="text-lg font-bold text-[#e5b32f]">:</span>
-        <div className="text-center">
-          <div className="text-xl sm:text-2xl font-bold font-mono text-[#ffe58f] tracking-wider">
-            {pad(timeLeft.hours)}
-          </div>
-          <div className="text-[9px] uppercase tracking-wider text-white/60">Hours</div>
-        </div>
-        <span className="text-lg font-bold text-[#e5b32f]">:</span>
-        <div className="text-center">
-          <div className="text-xl sm:text-2xl font-bold font-mono text-[#ffe58f] tracking-wider">
-            {pad(timeLeft.minutes)}
-          </div>
-          <div className="text-[9px] uppercase tracking-wider text-white/60">Minutes</div>
-        </div>
-        <span className="text-lg font-bold text-[#e5b32f]">:</span>
-        <div className="text-center">
-          <div className="text-xl sm:text-2xl font-bold font-mono text-[#ffe58f] tracking-wider">
-            {pad(timeLeft.seconds)}
-          </div>
-          <div className="text-[9px] uppercase tracking-wider text-white/60">Seconds</div>
-        </div>
+      <div className="flex items-center justify-center gap-1.5 sm:gap-2.5">
+        {timeBlocks.map((block, i) => (
+          <React.Fragment key={block.label}>
+            <div className="flex flex-col items-center">
+              <div className="relative w-[48px] h-[54px] sm:w-[60px] sm:h-[68px] rounded-[12px] bg-gradient-to-b from-[#2a133b] to-[#0d0414] border-[1.5px] border-[#f5c64c]/50 shadow-[0_4px_20px_rgba(0,0,0,0.8),inset_0_2px_12px_rgba(245,198,76,0.25)] flex items-center justify-center overflow-hidden group">
+                <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(245,198,76,0.35),transparent_70%)] opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"></div>
+                <div className="absolute top-1/2 left-0 w-full h-[1.5px] bg-black/60 z-10 pointer-events-none shadow-[0_1px_2px_rgba(255,255,255,0.1)]"></div>
+                <span className="relative z-20 font-['Cinzel_Decorative'] text-[26px] sm:text-[34px] font-extrabold text-transparent bg-clip-text bg-gradient-to-b from-[#ffffff] via-[#fde047] to-[#d97706] drop-shadow-[0_2px_8px_rgba(245,158,11,0.8)] animate-pulse-slow">
+                  {block.value}
+                </span>
+              </div>
+              <span className="text-[9px] sm:text-[10.5px] font-bold uppercase tracking-widest text-[#d4af37] mt-2 drop-shadow-[0_1px_2px_rgba(0,0,0,0.8)]">
+                {block.label}
+              </span>
+            </div>
+            {i < 3 && <span className="text-[18px] sm:text-[24px] font-bold text-[#e5b32f]/80 -mt-5 animate-pulse">:</span>}
+          </React.Fragment>
+        ))}
       </div>
     );
   }

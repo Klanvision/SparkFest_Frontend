@@ -24,7 +24,7 @@ const FAQS = [
     a: 'Winners are announced in real-time during the Live Draw every Saturday at 8:00 PM IST. If your ticket wins, you will receive an immediate SMS alert, email voucher, and confirmation code directly to your registered contact.'
   },
   {
-    q: 'How do I claim a Luxury Car, Gold, or Cash prize?',
+    q: 'How do I claim a Luxury Car, Gold, or premium gift?',
     a: 'Visit the Winners or Prizes page and click "Claim Prize" with your 10-digit registered mobile number and lucky ticket ID. Our VIP claims concierge will verify your identity and guide you through fulfillment.'
   },
   {
@@ -384,7 +384,7 @@ export default function Contact() {
   };
 
   return (
-    <div className="pt-[68px] sm:pt-[76px] lg:pt-[80px] w-full min-h-screen">
+    <div className="pt-[68px] sm:pt-[76px] lg:pt-[80px] w-full">
       {/* Toast Notification */}
       {toastMessage && (
         <div className="fixed top-24 right-4 sm:right-8 z-50 animate-scaleUp">
@@ -396,15 +396,15 @@ export default function Contact() {
       )}
 
       <div
-        className="w-full min-h-[calc(100vh-80px)] flex flex-col justify-center overflow-x-hidden"
+        className="w-full flex flex-col justify-start overflow-x-hidden pb-10"
         style={{
           backgroundImage: `url(${contactPageBg})`,
-          backgroundSize: 'cover',
-          backgroundPosition: 'center top',
+          backgroundSize: '100% 100%',
+          backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat'
         }}
       >
-        <div className="py-6 sm:py-8 lg:py-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-center">
+        <div className="pt-6 sm:pt-8 lg:pt-10 pb-0 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full flex flex-col justify-start flex-1 mb-0">
           
           {/* Header */}
           <div className="text-center max-w-3xl mx-auto space-y-2.5 mb-6 sm:mb-8">
@@ -412,9 +412,23 @@ export default function Contact() {
               <Headphones className="w-3.5 h-3.5 text-amber-400" />
               <span>Festive Concierge & Support</span>
             </div>
-            <h1 className="font-serif text-3xl sm:text-4xl lg:text-5xl font-extrabold gold-gradient-text tracking-wide">
-              Contact Diwali Dhamaka
-            </h1>
+            <div className="flex flex-col items-center gap-3">
+              <h1 className="font-serif italic font-extrabold text-[36px] sm:text-[46px] lg:text-[56px] tracking-wider drop-shadow-[0_4px_15px_rgba(0,0,0,0.9)]"
+                style={{
+                  background: 'linear-gradient(135deg, #fff7cc 0%, #f5c64c 35%, #d4af37 65%, #c8922e 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  WebkitTextStroke: '1px rgba(245, 198, 76, 0.3)',
+                  lineHeight: '1.2'
+                }}>
+                Contact Diwali Dhamaka
+              </h1>
+              <div className="flex items-center justify-center gap-2 mt-1">
+                <div className="h-[1px] w-16 bg-gradient-to-r from-transparent to-[#d4af37]" />
+                <div className="w-1.5 h-1.5 rotate-45 bg-[#f5c64c] shadow-[0_0_8px_rgba(245,198,76,0.8)]" />
+                <div className="h-[1px] w-16 bg-gradient-to-l from-transparent to-[#d4af37]" />
+              </div>
+            </div>
             <p className="text-xs sm:text-sm text-white/75 leading-relaxed max-w-2xl mx-auto">
               Have questions regarding your lucky draw ticket, prize claims, or live draw schedules? Our verified concierge desk is here to assist you promptly.
             </p>
@@ -424,17 +438,18 @@ export default function Contact() {
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-5 sm:gap-6 items-start">
             
             {/* Left Column: Direct Assistance Channels */}
-            <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#181133]/95 via-[#101228]/95 to-[#090b1c]/98 backdrop-blur-2xl border border-[#f3c64c]/40 shadow-[0_15px_45px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(243,198,76,0.14)] relative overflow-hidden group/left">
+            <div className="lg:col-span-5 flex flex-col justify-between p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#181133]/80 via-[#101228]/85 to-[#090b1c]/90 backdrop-blur-xl border border-purple-500/30 shadow-[0_15px_45px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(168,85,247,0.15),inset_0_0_20px_rgba(168,85,247,0.05)] relative overflow-hidden group/left">
               {/* Radial Ambient Glow */}
-              <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(245,158,11,0.22),transparent_70%)] blur-2xl" />
+              <div className="absolute -top-12 -left-12 w-48 h-48 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(168,85,247,0.15),transparent_70%)] blur-2xl" />
 
               <div>
                 {/* Title */}
                 <div className="flex items-center justify-between mb-1.5">
-                  <h2 className="font-serif text-lg sm:text-xl font-bold text-[#ffe58f] tracking-wide">
-                    Direct Concierge Channels
+                  <h2 className="font-serif text-xl sm:text-2xl font-extrabold tracking-wider drop-shadow-md text-transparent bg-clip-text bg-gradient-to-r from-[#e8d5ff] via-[#d8b4fe] to-[#c084fc] whitespace-nowrap">
+                    Official Support
                   </h2>
-                  <span className="p-1 rounded-lg bg-amber-400/10 border border-amber-400/25 text-amber-300">
+                  <span className="p-1 rounded-lg bg-purple-500/10 border border-purple-500/25 text-purple-300 shadow-[0_0_10px_rgba(168,85,247,0.2)]">
+
                     <Headphones className="w-3.5 h-3.5" />
                   </span>
                 </div>
@@ -639,39 +654,6 @@ export default function Contact() {
                     </div>
                   </div>
 
-                  {/* 5. Corporate Headquarters */}
-                  <a
-                    href="https://maps.google.com/?q=Bandra+Kurla+Complex+Mumbai"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group/item relative p-3 rounded-2xl bg-gradient-to-r from-white/[0.05] to-white/[0.02] hover:from-[#351e52]/80 hover:via-[#22153b]/90 hover:to-[#120f26]/95 border border-white/[0.08] hover:border-amber-400/60 shadow-sm hover:shadow-[0_8px_25px_-5px_rgba(243,198,76,0.3),inset_0_0_15px_rgba(243,198,76,0.06)] hover:translate-x-1.5 transition-all duration-300 cursor-pointer overflow-hidden block"
-                  >
-                    <div className="absolute inset-0 -translate-x-full group-hover/item:translate-x-full transition-transform duration-1000 ease-out bg-gradient-to-r from-transparent via-white/10 to-transparent pointer-events-none" />
-
-                    <div className="flex items-center justify-between gap-3 relative z-10">
-                      <div className="flex items-center gap-3 min-w-0">
-                        <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-[#351c58] to-[#161230] flex items-center justify-center text-amber-300 border border-amber-400/40 shadow-[0_0_12px_rgba(245,158,11,0.25)] group-hover/item:scale-110 group-hover/item:border-amber-300 group-hover/item:shadow-gold-glow group-hover/item:rotate-3 transition-all duration-300 shrink-0">
-                          <MapPin className="w-4 h-4 group-hover/item:text-white transition-colors" />
-                        </div>
-                        <div className="min-w-0">
-                          <div className="text-[10px] text-white/50 font-extrabold uppercase tracking-wider group-hover/item:text-amber-300/90 transition-colors">
-                            Corporate Headquarters
-                          </div>
-                          <div className="text-xs sm:text-sm font-semibold text-white/95 group-hover/item:text-[#ffe58f] transition-colors leading-tight">
-                            Diwali Dhamaka Towers, BKC, Mumbai
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="shrink-0">
-                        <span className="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg bg-white/5 group-hover/item:bg-amber-400/20 border border-white/10 group-hover/item:border-amber-400/40 text-white/50 group-hover/item:text-amber-200 text-[10px] font-bold tracking-wider transition-all">
-                          <span>Map</span>
-                          <ArrowUpRight className="w-3 h-3 group-hover/item:translate-x-0.5 group-hover/item:-translate-y-0.5 transition-transform" />
-                        </span>
-                      </div>
-                    </div>
-                  </a>
-
                 </div>
               </div>
 
@@ -685,56 +667,9 @@ export default function Contact() {
             </div>
 
             {/* Right Column: Interactive Multi-Tab Workspace */}
-            <div className="lg:col-span-7 flex flex-col p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#181133]/95 via-[#101228]/95 to-[#090b1c]/98 backdrop-blur-2xl border border-[#f3c64c]/40 shadow-[0_15px_45px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(243,198,76,0.14)] relative overflow-hidden">
+            <div className="lg:col-span-7 flex flex-col p-5 sm:p-6 rounded-3xl bg-gradient-to-b from-[#181133]/80 via-[#101228]/85 to-[#090b1c]/90 backdrop-blur-xl border border-purple-500/30 shadow-[0_15px_45px_-10px_rgba(0,0,0,0.85),0_0_35px_rgba(168,85,247,0.15),inset_0_0_20px_rgba(168,85,247,0.05)] relative overflow-hidden">
               {/* Radial Ambient Glow */}
-              <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(245,158,11,0.22),transparent_70%)] blur-2xl" />
-
-              {/* Tab Navigation Segmented Bar */}
-              <div className="flex items-center justify-between gap-2 p-1.5 rounded-2xl bg-[#0b0d1e]/80 border border-white/10 mb-4 sm:mb-5 relative z-10">
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('form')}
-                  className={`flex-1 py-1.5 sm:py-2 px-3 rounded-xl font-bold text-xs sm:text-xs transition-all flex items-center justify-center gap-1.5 ${
-                    activeTab === 'form'
-                      ? 'bg-gradient-to-r from-amber-500/30 via-amber-400/25 to-amber-500/20 text-[#ffe58f] border border-amber-400/60 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                      : 'text-white/60 hover:text-white hover:bg-white/[0.04]'
-                  }`}
-                >
-                  <Send className="w-3.5 h-3.5" />
-                  <span>Send Inquiry</span>
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('track')}
-                  className={`flex-1 py-1.5 sm:py-2 px-3 rounded-xl font-bold text-xs sm:text-xs transition-all flex items-center justify-center gap-1.5 ${
-                    activeTab === 'track'
-                      ? 'bg-gradient-to-r from-amber-500/30 via-amber-400/25 to-amber-500/20 text-[#ffe58f] border border-amber-400/60 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                      : 'text-white/60 hover:text-white hover:bg-white/[0.04]'
-                  }`}
-                >
-                  <Search className="w-3.5 h-3.5" />
-                  <span>Track Status</span>
-                  {savedInquiries.length > 0 && (
-                    <span className="px-1.5 py-0.2 rounded-full bg-amber-400 text-[#0b0d1e] text-[9px] font-black">
-                      {savedInquiries.length}
-                    </span>
-                  )}
-                </button>
-
-                <button
-                  type="button"
-                  onClick={() => setActiveTab('faqs')}
-                  className={`flex-1 py-1.5 sm:py-2 px-3 rounded-xl font-bold text-xs sm:text-xs transition-all flex items-center justify-center gap-1.5 ${
-                    activeTab === 'faqs'
-                      ? 'bg-gradient-to-r from-amber-500/30 via-amber-400/25 to-amber-500/20 text-[#ffe58f] border border-amber-400/60 shadow-[0_0_15px_rgba(245,158,11,0.2)]'
-                      : 'text-white/60 hover:text-white hover:bg-white/[0.04]'
-                  }`}
-                >
-                  <HelpCircle className="w-3.5 h-3.5" />
-                  <span>Fast FAQs</span>
-                </button>
-              </div>
+              <div className="absolute -top-12 -right-12 w-48 h-48 rounded-full pointer-events-none bg-[radial-gradient(circle,rgba(168,85,247,0.15),transparent_70%)] blur-2xl" />
 
               {/* ========================================================================= */}
               {/* TAB 1: SUBMIT INQUIRY FORM */}
